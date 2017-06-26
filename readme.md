@@ -189,7 +189,7 @@ The last three remaining parametes are tuning parameters involving the creation 
 - simplify (None): Simplification will not be done by default. If provided, it is in units of degrees and is used to simplify and smooth the output. Simplification is heavily application and source imagery dependent, and is a lossy process. Consider starting points for RapidEye and PlanetScope data to be 0.00035, and  0.0007 for Landsat8.
 
 ## NDWI Band Combinations
-The traditional NDWI algorithm uses the green and NIR bands to calculate a normalized difference index:
+The traditional NDWI algorithm uses the Green and NIR bands to calculate a normalized difference index:
 
 ```
 NDWI = (green-nir) / (green+nir)
