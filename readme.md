@@ -55,7 +55,7 @@ After a moment, footprints of the scenes found in the catalog should render on t
 
 > __Note:__ Start from the end of the instructions for [Searching for Scenes](#searching-for-scenes).
 
-### 1. After Picking a scene, Find a Compatible Algorithm
+### 1. After Picking a Scene, Find a Compatible Algorithm
 
 Look under the _Select Algorithm_ section to see what algorithms are available.  Some algorithms have strict requirements in order to yield meaningful coastline vector data:
 
@@ -67,7 +67,7 @@ Look under the _Select Algorithm_ section to see what algorithms are available. 
 
 <!---->
 
-> __Note__: Algorithm processing time may vary depending on the size/age of the scene (i.e., bigger scenes require more time to process and older scenes require more time to request from archives) and the Beachfront system load at the time of execution.  If a scene takes longer to process than 2 hours, please contact the Beachfront team for technical support.
+> __Note__: Algorithm processing time may vary depending on the size/age of the scene (i.e., bigger scenes require more time to process and older scenes require more time to request from archives) and the Beachfront system load at the time of execution.  If a scene takes longer to process than two hours, please contact the Beachfront team for technical support.
 
 To submit the scene for algorithm processing, click the ___Run Algorithm___ button:
 
@@ -83,7 +83,7 @@ The ___Jobs___ menu will list the status and details for all jobs you are tracki
 
 [![screenshot](images/0007_navigate_to_jobs.png)](images/0007_navigate_to_jobs.png)
 
-### 2. Find the Job you Want to View, then Click _View on Map_
+### 2. Find the Job you Want to View and then Click _View on Map_
 
 > __Note:__ You can also click any visible job frame directly on the map to "select" it in the same way.
 
@@ -105,7 +105,7 @@ To view extra information about a particular job, expand the job's row in the __
 
 ### 5. Click "Download" Button to Download Detections as GeoJSON
 
-The GeoJSON file will have the same name as the job, e.g., `20170103_162024_1737916_RapidEye-1.geojson`:
+The GeoJSON file will have the same name as the job, e.g., `20170103_162024_1737916_RdEye-1.geojson`:
 
 [![screenshot](images/0011_download_job_geojson.png)](images/0011_download_job_geojson.png)
 
@@ -164,11 +164,11 @@ optional arguments:
   --version             Print version and exit
 ```
 
-If a single filename is provided via the INPUT argument, then BANDS needs to be provided to specify which bands in the file should be used, otherwise it defaults to '1, 1', which means it would use the same band for both green and nir. This example uses the 1st band in the file as the green band and the 5th as the nir.
+If a single filename is provided via the INPUT argument, then BANDS needs to be provided to specify which bands in the file should be used. Otherwise it defaults to '1, 1', meaning it would use the same band for both green and nir. This example uses the 1st band in the file as the green band and the 5th as the nir.
 
     $ bfalg-ndwi -i test1.tif -b 1 5
 
-If the INPUT parameter is provided twice for two filenames, then BANDS is the band number for the first file (green) and the second file (nir). This example uses the second band from the test1.tif as the green band, the first band from test2.tif as the nir band.
+If the INPUT parameter is provided twice for two filenames, then BANDS is the band number for the first file (green) and the second file (nir). This example uses the second band from the test1.tif as the green band, and the first band from test2.tif as the nir band.
 
     $ bfalg-ndwi -i test1.tif -i test2.tif -b 2 1
 
@@ -176,7 +176,7 @@ Input files are all that are absolutely required, but a more typical scenario wo
 
     $ bfalg-ndwi -i scene123.tif -b 1 2 --basename testrun --outdir scene123-output --coastmask
 
-This will apply the included buffered coastline (bfalg_ndwi/coastmask.shp) to the image to mask out non-coastal regions. It will store all output files with with the name 'testrun' (+ additional tag and extension, e.g. testrun.geojson, testrun_otsu.TIF) in the directory 'scene123-output'.
+This will apply the included buffered coastline (bfalg_ndwi/coastmask.shp) to the image to mask out non-coastal regions. It will store all output files with the name 'testrun' (+ additional tag and extension, e.g. testrun.geojson, testrun_otsu.TIF) in the directory 'scene123-output'.
 
 For Landsat8, if the BQA band is available it can be provided which will mask out the clouds from the scene.
 
@@ -184,9 +184,9 @@ For Landsat8, if the BQA band is available it can be provided which will mask ou
 
 The last three remaining parametes are tuning parameters involving the creation of the vector output.
 
-- minsize (100): The minimum size a linestring should be before being filtered out. This corresponds to the potrace parameter 'turdsize', and is not the length of the line but rather some measure of the extent of it. The default of 10 will not filter out many lines. For Landsat, a value of 100 works well and removing false coasts, but may also remove islands or smaller incomplete shorelines.
-- close (5): Linestrings will be closed if their two endpoints are within this number of pixels. The default is 5, and setting it to 0 will turn it off. This should not be set to a value much higher than 10.
-- simplify (None): Simplification will not be done by default. If provided it is in units of degrees, and is used to simplify and smooth the output. Simplification is heavily application and source imagery dependent, and is a lossy process. Consider starting points for RapidEye and PlanetScope data to be 0.00035, and for Landsat8, 0.0007.
+- minsize (100): This is the minimum size a linestring should be before being filtered out. This corresponds to the potrace parameter 'turdsize', and is not the length of the line but rather some measure of the extent of it. The default of 10 will not filter out many lines. For Landsat, a value of 100 works well at removing false coasts, but may also remove islands or smaller incomplete shorelines.
+- close (5): Linestrings will be closed if their two endpoints are within this number of pixels. The default is 5 and setting it to 0 will turn it off. This should not be set to a value much higher than 10.
+- simplify (None): Simplification will not be done by default. If provided, it is in units of degrees and is used to simplify and smooth the output. Simplification is heavily application and source imagery dependent, and is a lossy process. Consider starting points for RapidEye and PlanetScope data to be 0.00035, and  0.0007 for Landsat8.
 
 ## NDWI Band Combinations
 The traditional NDWI algorithm uses the green and NIR bands to calculate a normalized difference index:
@@ -195,7 +195,7 @@ The traditional NDWI algorithm uses the green and NIR bands to calculate a norma
 NDWI = (green-nir) / (green+nir)
 ```
 
-The band names, green and nir, is what is referenced in the online help. However, other bands can work as well, or even better on some instruments. The 'Green' band is a band that has a high water reflectance, while the NIR band is a band that has a very low water reflectance. The following bands are recommended.
+The band names Green and NIR are what is referenced to in the online help. However, other bands can work as well or even better on some instruments. The 'Green' band is a band that has a high water reflectance, while the NIR band is a band that has a very low water reflectance. The following bands are recommended.
 
 | Sensor        | 'Green' band  | 'NIR' band  |
 |---------------|---------------|-------------|
@@ -208,7 +208,7 @@ The band names, green and nir, is what is referenced in the online help. However
 
 ## Description
 
-Bf-tideprediction is a Beachfront service that estimates the tide level for a given date/time as well as the 24 hour min/max tides and corresponding times surrounding that date/time.  This service is used by Beachfront to provide contextual information to be used in conjunction with Beachfront’s shoreline extraction services.
+Bf-tideprediction is a Beachfront service that estimates the tide level for a given date/time, as well as the 24-hour min/max tides and corresponding times surrounding that date/time.  This service is used by Beachfront to provide contextual information to be used in conjunction with Beachfront’s shoreline extraction services.
 
 ### Why are tides important for shoreline extraction?
 
@@ -218,7 +218,7 @@ Bf-tideprediction is a Beachfront service that estimates the tide level for a gi
 
 * Limited API access
 * Most services offer either historic tide data or predict future tides, but don’t offer both
-* Cost. Best services require user subscriptions
+* Cost - best services require user subscriptions
 * Query locations visible to 3rd party
 * Inability to migrate to classified environment
 * Reliance on 3rd party server availability
@@ -228,11 +228,11 @@ Bf-tideprediction is a Beachfront service that estimates the tide level for a gi
 
 Bf-tideprediction works in both individual and batch modes.
 
-### Individual Query mode:
+### Individual Query Mode:
 
 #### API
 
-The individual mode has an api endpoint of https://bf-tideprediction.geointservices.io and accepts the following keys:
+The individual mode has an API endpoint of https://bf-tideprediction.geointservices.io and accepts the following keys:
 
 | Keys | Description
 ------|-------------------
@@ -246,7 +246,7 @@ Sample Query:
 ~~~
 
 #### Web Interface
-The individual query mode also has a web-based form.  Enter coordinates in decimal degrees, and provide the data and time in the format YYY-mm-DD-HH-M in UST.  Select “Calculate” and the results will be returned in the browser as a json file.
+The individual query mode also has a web-based form.  Enter coordinates in decimal degrees, and provide the date and time in the format YYY-mm-DD-HH-M in UST.  Select “Calculate” and the results will be returned in the browser as a json file.
 
 ![Alt](images/image04.png)
 
@@ -283,12 +283,14 @@ curl -X POST -H "Content-Type: application/json"  -d '
 ## Algorithm
 
 
-Beachfront’s Tide Prediction service utilizes the python library Pytides to predict past and future tides.  These predictions are based upon harmonic constituents estimated from historical sea level buoy data. The service accepts a latitude/longitude pair and a date time group and returns the current tide level at that time, as well as the minimum and maximum of the 24 hour period following the time.  According to their documentation, Pytide's tidal prediction is based upon several fundamental assumptions.  The first assumption is that tides anywhere on Earth are caused solely by the gravitational forces of the moon and the sun. Pytides neglects the gravitational forces of other planetary bodies as their effect on the tide is several orders of magnitude weaker than those of the moon and sun.  The second assumption is that for any given location on Earth, there exist constant values such that the tide there obeys this relation.  So if we have many past measurements of the tide at a given location, we can attempt to choose values  which best fit our previous readings.Then, by assumption, we can predict the future tide by allowing t to increase into the future.
+Beachfront’s Tide Prediction service utilizes the python library Pytides to predict past and future tides.  These predictions are based upon harmonic constituents estimated from historical sea level buoy data. The service accepts a latitude/longitude pair and a date-time group and returns the current tide level at that time, as well as the minimum and maximum of the 24-hour period following the time.  
+
+According to their documentation, Pytide's tidal prediction is based upon several fundamental assumptions.  The first assumption is that tides anywhere on Earth are caused solely by the gravitational forces of the moon and the sun. Pytides neglects the gravitational forces of other planetary bodies, as their effect on the tide is several orders of magnitude weaker than those of the moon and sun.  The second assumption is that for any given location on Earth, there exists constant values such that the tide there obeys this relation.  So if we have many past measurements of the tide at a given location, we can attempt to choose values that best fit our previous readings. By assumption, we can then predict the future tide by allowing it to increase into the future.
 
 ![Example showing Tide prediction results compared to actual measurements](images/image09.png)
 
 
-Beachfront's Tide Prediction service obtains these historic measurements by querying the GLOSS buoy network.  The service takes latitude and longitude coordinates, as well as a date-time group (DTG).  A lookup table hosted by bf-tideprediction calculates the station id for the appropriate sea level monitoring stations.  Utilizing a locally stored database of historic sea level data, constituents are calculated for each appropriate station.  The tides are then predicted for those stations, for a 24 hour  period surrounding the image DTG on a minute by minute basis.  These data points are interpolated to provide sea level height for the image date-time group, and a minimum and maximum tide height for a given time period.
+Beachfront's Tide Prediction service obtains these historic measurements by querying the GLOSS buoy network.  The service takes latitude and longitude coordinates, as well as a date-time group (DTG).  A lookup table hosted by bf-tideprediction calculates the station ID for the appropriate sea level monitoring stations.  Utilizing a locally stored database of historic sea level data, constituents are calculated for each appropriate station.  The tides are then predicted for those stations in a 24 hour period surrounding the image DTG on a minute by minute basis.  These data points are interpolated to provide sea level height for the image date-time group, and a minimum and maximum tide height for a given time period.
 
 ![Gloss Buoy Locations](images/image08.png)
 
@@ -300,7 +302,7 @@ Beachfront's Tide Prediction service obtains these historic measurements by quer
 ###### Density Map of Gloss Buoy Locations
 
 
-A lookup table hosted by bf-tideprediction calculates the station id for the appropriate sea level monitoring stations by querying the coordinates against a pre-computed set of voronoi polygons.  In mathematics, a Voronoi diagram is a partitioning of a plane into regions based on distance to points in a specific subset of the plane.  For each initial point (or seed) there is a corresponding polygon consisting of all points closer to that seed than to any other. These regions are called Voronoi cells.  For the Beachfront Tide Prediction service, a one-time calculation of Voronoi polygons was generated for the Gloss Buoy data.  For a given coordinate, the corresponding known point is queried  This is simpler than triangulating between the points of a Delaunay triangle, but may be less accurate as its based on a single known point.
+A lookup table hosted by bf-tideprediction calculates the station ID for the appropriate sea level monitoring stations by querying the coordinates against a pre-computed set of voronoi polygons.  In mathematics, a Voronoi diagram is a partitioning of a plane into regions based on distance to points in a specific subset of the plane.  For each initial point (or seed) there is a corresponding polygon consisting of all points closer to that seed than to any other. These regions are called Voronoi cells.  For the Beachfront Tide Prediction service, a one-time calculation of Voronoi polygons was generated for the Gloss Buoy data.  For a given coordinate, the corresponding known point is queried  This is simpler than triangulating between the points of a Delaunay triangle, but may be less accurate as its based on a single known point.
 
 
 ![Voronoi Polygon Example](images/image13.png)
