@@ -164,11 +164,11 @@ optional arguments:
   --version             Print version and exit
 ```
 
-If a single filename is provided via the INPUT argument, then BANDS needs to be provided to specify which bands in the file should be used. Otherwise it defaults to '1, 1', meaning it would use the same band for both green and nir. This example uses the 1st band in the file as the green band and the 5th as the nir.
+If a single filename is provided via the INPUT argument, then BANDS needs to be provided to specify which bands in the file should be used. Otherwise it defaults to '1, 1', meaning it would use the same band for both green and nir. This example uses the first band in the file as the Green band and the fifth as the NIR.
 
     $ bfalg-ndwi -i test1.tif -b 1 5
 
-If the INPUT parameter is provided twice for two filenames, then BANDS is the band number for the first file (green) and the second file (nir). This example uses the second band from the test1.tif as the green band, and the first band from test2.tif as the nir band.
+If the INPUT parameter is provided twice for two filenames, then BANDS is the band number for the first file (Green) and the second file (NIR). This example uses the second band from the test1.tif as the Green band, and the first band from test2.tif as the NIR band.
 
     $ bfalg-ndwi -i test1.tif -i test2.tif -b 2 1
 
