@@ -25,20 +25,20 @@ The scene search is a part of the job creation workflow:
 
 ### 2. Draw a bounding box to define the search space
 
-Drawing a bounding box is a 2-click process.  Click once to drop the first corner and again to complete the bounding box:
+Drawing a bounding box is a two-click process.  Click once to drop the first corner and again to complete the bounding box:
 
 [![screenshot](images/0001_draw_bbox.png)](images/0001_draw_bbox.png)
 
 
-### 3. Adjust search criteria, then execute search
+### 3. Adjust search criteria and then execute search
 
 > __Note:__ Dates should be entered in `YYYY-MM-DD` format, e.g., `2017-07-04`.
 
-Make any necessary adjustments to the imagery source, cloud cover and date range, then click on the ___Search for imagery___ button to execute a search using the selected filtering criteria:
+Make any necessary adjustments to the imagery source, cloud cover, and date range, and then click on the ___Search for imagery___ button to execute a search using the selected filtering criteria:
 
 [![screenshot](images/0002_catalog_search_criteria.png)](images/0002_catalog_search_criteria.png)
 
-After a moment, footprints of the scenes found in the catalog should render on the map.  You can readjust the filtering criteria and re-execute the search as many times as you need:
+After a moment, footprints of the scenes found in the catalog should render on the map. You can readjust the filtering criteria and re-execute the search as many times as you need:
 
 [![screenshot](images/0003_catalog_search_results.png)](images/0003_catalog_search_results.png)
 
