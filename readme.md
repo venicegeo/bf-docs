@@ -178,7 +178,7 @@ Input files are all that are absolutely required, but a more typical scenario wo
 
 This will apply the included buffered coastline (bfalg_ndwi/coastmask.shp) to the image to mask out non-coastal regions. It will store all output files with the name 'testrun' (+ additional tag and extension, e.g. testrun.geojson, testrun_otsu.TIF) in the directory 'scene123-output'.
 
-If the BQA band is available in Landsat8, it can be provided which will mask out the clouds from the scene.
+For Landsat8: If the BQA band is available, it can be provided which will mask out the clouds from the scene.
 
     $ bfalg-ndwi -i LC80080282016215LGN00_B1.TIF LC80080282016215LGN00_B5.TIF --l8bqa LC80080282016215LGN00_BQA.TIF --basename LC80080282016215LGN00 --outdir LC80080282016215LGN00_test --coastmask
 
