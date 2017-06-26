@@ -195,7 +195,7 @@ The traditional NDWI algorithm uses the Green and NIR bands to calculate a norma
 NDWI = (green-nir) / (green+nir)
 ```
 
-The band names Green and NIR are what is referenced to in the online help. However, other bands can work as well or even better on some instruments. The 'Green' band is a band that has a high water reflectance, while the NIR band is a band that has a very low water reflectance. The following bands are recommended.
+The band names Green and NIR are what is referenced to in the online help. However, other bands can work as well or even better on some instruments. The Green band is a band that has a high water reflectance, while the NIR band is a band that has a very low water reflectance. The following bands are recommended.
 
 | Sensor        | 'Green' band  | 'NIR' band  |
 |---------------|---------------|-------------|
