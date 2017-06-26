@@ -34,7 +34,7 @@ Drawing a bounding box is a two-click process.  Click once to drop the first cor
 
 > __Note:__ Dates should be entered in `YYYY-MM-DD` format, e.g., `2017-07-04`.
 
-Make any necessary adjustments to the imagery source, cloud cover, and date range, and then click on the ___Search for imagery___ button to execute a search using the selected filtering criteria:
+Make any necessary adjustments to the imagery source, cloud cover, and date range, and then click on the _Search for imagery_ button to execute a search using the selected filtering criteria:
 
 [![screenshot](images/0002_catalog_search_criteria.png)](images/0002_catalog_search_criteria.png)
 
