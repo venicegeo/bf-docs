@@ -16,21 +16,21 @@ Classification: UNCLASSIFIED
 
 ## Searching for Scenes
 
-### 1. Navigate to the _Create Job_ menu
+### 1. Navigate to the _Create Job_ Menu
 
 The scene search is a part of the job creation workflow:
 
 [![screenshot](images/0000_navigate_to_create_job.png)](images/0000_navigate_to_create_job.png)
 
 
-### 2. Draw a bounding box to define the search space
+### 2. Draw a Bounding Box to Define the Search Space
 
 Drawing a bounding box is a two-click process.  Click once to drop the first corner and again to complete the bounding box:
 
 [![screenshot](images/0001_draw_bbox.png)](images/0001_draw_bbox.png)
 
 
-### 3. Adjust search criteria and then execute search
+### 3. Adjust Search Criteria and then Execute Search
 
 > __Note:__ Dates should be entered in `YYYY-MM-DD` format, e.g., `2017-07-04`.
 
@@ -43,7 +43,7 @@ After a moment, footprints of the scenes found in the catalog should render on t
 [![screenshot](images/0003_catalog_search_results.png)](images/0003_catalog_search_results.png)
 
 
-### 4. Click on a scene's footprint to bring up metadata and a preview
+### 4. Click on a Scene's Footprint to Bring up Metadata and a Preview
 
 > __Note__: If the full-color preview does not load on the map, please contact the Beachfront team for technical support.
 
@@ -55,13 +55,13 @@ After a moment, footprints of the scenes found in the catalog should render on t
 
 > __Note:__ Start from the end of the instructions for [Searching for Scenes](#searching-for-scenes).
 
-### 1. After picking a scene, find a compatible algorithm
+### 1. After Picking a scene, Find a Compatible Algorithm
 
 Look under the _Select Algorithm_ section to see what algorithms are available.  Some algorithms have strict requirements in order to yield meaningful coastline vector data:
 
 [![screenshot](images/0005_select_algorithm_incompatible.png)](images/0005_select_algorithm_incompatible.png)
 
-### 2. After picking an algorithm, submit the scene for processing
+### 2. After Picking an Algorithm, Submit the Scene for Processing
 
 > __Note__: By default, Beachfront will name the job after the scene being processed.  You can optionally give a custom name to a job if desired.
 
@@ -77,13 +77,13 @@ To submit the scene for algorithm processing, click the ___Run Algorithm___ butt
 
 ## Viewing a Job's Results
 
-### 1. Navigate to the _Jobs_ menu
+### 1. Navigate to the _Jobs_ Menu
 
 The ___Jobs___ menu will list the status and details for all jobs you are tracking:
 
 [![screenshot](images/0007_navigate_to_jobs.png)](images/0007_navigate_to_jobs.png)
 
-### 2. Find the job you want to view, then click _View on Map_
+### 2. Find the Job you Want to View, then Click _View on Map_
 
 > __Note:__ You can also click any visible job frame directly on the map to "select" it in the same way.
 
@@ -91,19 +91,19 @@ Selecting a job from the ___Jobs___ menu will pan and zoom the map to the job's 
 
 [![screenshot](images/0008_view_job_on_map.png)](images/0008_view_job_on_map.png)
 
-### 3. Shoreline detections will render for any successful job
+### 3. Shoreline Detections will Render for any Successful Job
 
 > __Note:__ If you select a job that is currently running, shoreline detections automatically appear once it successfully completes.  If this does not happen, please notify the Beachfront team for technical support.
 
 [![screenshot](images/0009_selected_job_frame.png)](images/0009_selected_job_frame.png)
 
-### 4. Click on the job's list item row to view more details
+### 4. Click on the Job's List Item Row to View More Details
 
 To view extra information about a particular job, expand the job's row in the ___Jobs___ menu:
 
 [![screenshot](images/0010_job_details.png)](images/0010_job_details.png)
 
-### 5. Click "Download" button to download detections as GeoJSON
+### 5. Click "Download" Button to Download Detections as GeoJSON
 
 The GeoJSON file will have the same name as the job, e.g., `20170103_162024_1737916_RapidEye-1.geojson`:
 
@@ -114,14 +114,14 @@ The GeoJSON file will have the same name as the job, e.g., `20170103_162024_1737
 
 ## Removing a Job from your Jobs List
 
-### 1. Navigate to the _Jobs_ menu
+### 1. Navigate to the _Jobs_ Menu
 
 The ___Jobs___ menu will list the status and details for all jobs you are tracking:
 
 [![screenshot](images/0007_navigate_to_jobs.png)](images/0007_navigate_to_jobs.png)
 
 
-### 2. Expand the job's details, then click _Remove this Job_
+### 2. Expand the Job's Details, then Click _Remove this Job_
 
 > __Note:__ The job does not get deleted from the system; it just won't show up in your tracking list anymore unless you visit that job's URL again.
 
