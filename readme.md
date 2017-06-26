@@ -217,7 +217,7 @@ Bf-tideprediction is a Beachfront service that estimates the tide level for a gi
 ### Why create a new tide service instead of using a third-party service?
 
 * Limited API access
-* Most services offer either historic tide data or predict future tides, but don’t offer both
+* Most services offer either historic tide data or predict future tides but not both
 * Cost - best services require user subscriptions
 * Query locations visible to 3rd party
 * Inability to migrate to classified environment
