@@ -69,7 +69,7 @@ Look under the _Select Algorithm_ section to see what algorithms are available. 
 
 > __Note__: Algorithm processing time may vary depending on the size/age of the scene (i.e., bigger scenes require more time to process and older scenes require more time to request from archives) and the Beachfront system load at the time of execution.  If a scene takes longer to process than two hours, please contact the Beachfront team for technical support.
 
-To submit the scene for algorithm processing, click the ___Run Algorithm___ button:
+To submit the scene for algorithm processing, click the _Run Algorithm_ button:
 
 [![screenshot](images/0006_select_algorithm_compatible.png)](images/0006_select_algorithm_compatible.png)
 
