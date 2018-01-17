@@ -1,0 +1,11 @@
+site_name: Beachfront Documentation
+markdown_extensions:
+  - smarty
+  - toc:
+      permalink: True
+      separator: _
+  - sane_lists
+pages:
+  - Home: index.md
+  - User Guide:
+      userguide/index.md
