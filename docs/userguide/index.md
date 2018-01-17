@@ -1,18 +1,4 @@
-Classification: UNCLASSIFIED
-
-![Beachfront](images/logo_inverted.png)
-
 # Beachfront User's Guide
-
-## Table of Contents
-
-- [Searching for Scenes](#searching-for-scenes)
-- [Creating a Job](#creating-a-job)
-- [Viewing a Job's Results](#viewing-a-jobs-results)
-- [Removing a Job from your Jobs List](#removing-a-job-from-your-jobs-list)
-- [NDWI Algorithm](#ndwi-algorithm)
-- [Tide Prediction](#tide-prediction)
-
 
 ## Searching for Scenes
 
@@ -20,14 +6,14 @@ Classification: UNCLASSIFIED
 
 The scene search is a part of the job creation workflow:
 
-[![screenshot](images/0000_navigate_to_create_job.png)](images/0000_navigate_to_create_job.png)
+![screenshot](images/0000_navigate_to_create_job.png)
 
 
 ### 2. Draw a Bounding Box to Define the Search Space
 
 Drawing a bounding box is a two-click process.  Click once to drop the first corner and again to complete the bounding box:
 
-[![screenshot](images/0001_draw_bbox.png)](images/0001_draw_bbox.png)
+![screenshot](images/0001_draw_bbox.png)
 
 
 ### 3. Adjust Search Criteria and then Execute Search

@@ -1,6 +1,13 @@
+![Beachfront](docs/userguide/images/logo_inverted.png)
+
 # bf-docs
 
 This repository contains the markdown source for Beachfront documentation.
+
+## Table of Contents
+
+* [Building HTML Documentation](#building-html-documentation)
+* [Documentation Authors](#documentation-authors)
 
 ## Building HTML Documentation
 
@@ -77,3 +84,20 @@ serve` command to run a local server on port 8000 to review the HTML documents:
 
 Then just use a browser to access http://localhost:8000/ to see the results.
 This site will automatically reload when you make changes to the files.
+
+> The behavior of `mkdocs` is controlled by the `mkdocs.yml` file in this
+> repo's root directory.  See [MkDocs
+> Configuration](http://www.mkdocs.org/user-guide/configuration/) for details.
+
+## Documentation Authors
+
+All documentation that is intended to be distributed as part of the static
+Beachfront documentation site must be somewhere in the `docs/` directory and
+should have the `.md` extension.
+
+The documentation must be written in markdown for the [Python implementation of
+Markdown](https://pypi.python.org/pypi/Markdown/) with the extensions:
+
+* [SmartyPants](https://python-markdown.github.io/extensions/smarty/)
+* [Sane Lists](https://python-markdown.github.io/extensions/sane_lists/)
+* [Table of Contents](https://python-markdown.github.io/extensions/toc/)
