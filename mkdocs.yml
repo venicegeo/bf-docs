@@ -1,11 +1,13 @@
-site_name: Beachfront Documentation
+site_name: Beachfront
 markdown_extensions:
-  - sane_lists
-  - smarty
-  - toc:
-      permalink: True
-      separator: _
+- sane_lists
+- smarty
+- toc:
+    permalink: True
+    separator: _
 pages:
-  - Home: index.md
-  - User Guide:
-      userguide/index.md
+- Home: index.md
+- User Guide:
+  - Beachfront: userguide/index.md
+  - Algorithms: userguide/algorithms.md
+  - Tide Prediction: userguide/tide-prediction.md
