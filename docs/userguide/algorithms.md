@@ -52,7 +52,7 @@ This will apply the included buffered coastline (bfalg_ndwi/coastmask.shp) to th
 
 For Landsat8: If the BQA band is available, it can be provided which will mask out the clouds from the scene.
 
-    $ bfalg-ndwi -i LC80080282016215LGN00_B1.TIF LC80080282016215LGN00_B5.TIF --l8bqa LC80080282016215LGN00_BQA.TIF --basename LC80080282016215LGN00 --outdir LC80080282016215LGN00_test --coastmask
+    $ bfalg-ndwi -i LC80080282016215LGN00_B1.TIF -i LC80080282016215LGN00_B5.TIF --l8bqa LC80080282016215LGN00_BQA.TIF --basename LC80080282016215LGN00 --outdir LC80080282016215LGN00_test --coastmask
 
 The last three remaining parametes are tuning parameters involving the creation of the vector output.
 
