@@ -13,7 +13,7 @@ usage: bfalg-ndwi [-h] -i INPUT [-b BANDS BANDS] [--outdir OUTDIR]
                   [--minsize MINSIZE] [--close CLOSE] [--simple SIMPLE]
                   [--verbose VERBOSE] [--version]
 
-Beachfront Algorithm: NDWI (v1.0.3)
+Beachfront Algorithm: NDWI (v1.0.8)
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -74,3 +74,4 @@ The band names Green and NIR are what is referenced to in the online help. Howev
 | Landsat8      | 1 (Coastal)   | 5 (NIR)     |
 | RapidEye      | 2 (Green)     | 4 (NIR)     |
 | PlanetSceope  | 2 (Green)     | 4 (NIR)     |
+| Sentinel-2    | 2 (Blue)      | 8 (NIR)     |
