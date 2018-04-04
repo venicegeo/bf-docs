@@ -23,8 +23,8 @@ node {
       sh "$CONDA_HOME/bin/conda create --name bf-docs -y"
       sh "$CONDA_HOME/bin/conda config --add channels conda-forge"
       // sh "$CONDA_HOME/bin/conda install mkdocs"
-      sh "conda update -n base conda"
-      sh "conda install -c conda-forge mkdocs"
+      sh "$CONDA_HOME/bin/conda update -n base conda"
+      sh "$CONDA_HOME/bin/conda install -c conda-forge mkdocs"
     }
   }
 
