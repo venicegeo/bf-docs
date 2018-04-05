@@ -20,10 +20,10 @@ node {
     sh "bash miniconda.sh -b -p ${root}/miniconda2"
     sh "rm miniconda.sh"
     withEnv(["CONDA_HOME=${root}/miniconda2"]) {
+      sh "$CONDA_HOME/bin/conda update -n base conda"
       sh "$CONDA_HOME/bin/conda create --name bf-docs -y"
       sh "$CONDA_HOME/bin/conda config --add channels conda-forge"
-      // sh "$CONDA_HOME/bin/conda install mkdocs"
-      //sh "$CONDA_HOME/bin/conda update -n base conda"
+      // sh "$CONDA_HOME/bin/conda install mkdocs
       sh "$CONDA_HOME/bin/conda install -c conda-forge mkdocs"
     }
   }
