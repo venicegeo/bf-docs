@@ -21,7 +21,7 @@ node {
     sh "rm miniconda.sh"
     withEnv(["CONDA_HOME=${root}/miniconda2"]) {
       sh "$CONDA_HOME/bin/conda info --envs"
-      sh "$CONDA_HOME/bin/conda update conda"
+      sh "$CONDA_HOME/bin/conda update -n root conda"
       //sh "$CONDA_HOME/bin/conda update -n base conda"
       sh "$CONDA_HOME/bin/conda create --name bf-docs -y"
       sh "$CONDA_HOME/bin/conda config --add channels conda-forge"
