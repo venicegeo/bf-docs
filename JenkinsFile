@@ -82,8 +82,8 @@ node {
         sh "cf auth ${CFUSER} ${CFPASS}"
         sh "cf target -o ${env.PCF_ORG} -s ${env.PHASE_ONE_PCF_SPACE}"
         sh "cf push ${appName} -f Staticfile --hostname ${appName} -d ${env.PHASE_ONE_PCF_DOMAIN} --no-start -m 512M"
-	sh "cf set-env ${appName} SPACE ${env.PHASE_ONE_PCF_SPACE}"
-	sh "cf set-env ${appName} DOMAIN ${env.PHASE_ONE_PCF_DOMAIN}"
+      	sh "cf set-env ${appName} SPACE ${env.PHASE_ONE_PCF_SPACE}"
+      	sh "cf set-env ${appName} DOMAIN ${env.PHASE_ONE_PCF_DOMAIN}"
         try {
           sh "cf start ${appName}"
         } catch (Exception e) {
