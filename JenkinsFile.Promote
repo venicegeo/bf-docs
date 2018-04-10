@@ -40,7 +40,7 @@ node {
 
     stage('Pull Artifact') {
       authenticatePcf()
-      if (appVersion == "") {
+      if (appVersion == "" || !appVersion) {
         // Get the latest version from Phase 2
         echo "No version specified. Fetching the latest version from ${env.PHASE_TWO_PCF_SPACE}"
         sh "cf target -o ${env.PCF_ORG} -s ${env.PHASE_TWO_PCF_SPACE}"
