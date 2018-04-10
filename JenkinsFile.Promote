@@ -3,7 +3,7 @@
 node {
   def root = pwd()
   def mvn = tool 'M3'
-  def appVersion = "${env.PROMOTE_VERSION}"
+  def appVersion
   def appBaseName = "bf-docs"
   def appName
 
@@ -22,6 +22,7 @@ node {
       def paramValueString = (param.defaultvalue != null) ? param.defaultvalue.toString() : ""
       env."${param.name}" = (param.type == "booleanParam") ? paramValueString.toBoolean() : paramValueString
     }
+    appVersion = "${env.PROMOTE_VERSION}"
   }
 
   if(!fileExists('.cf')) {
