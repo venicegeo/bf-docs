@@ -19,7 +19,7 @@ node {
     // read the current configuration
     def configJson = readJSON file: "${configFile}"
     for (param in configJson.credparams + configJson.jobparams) {
-      def paramValueString = (param.defaultvalue != null) ? paramValue.toString() : ""
+      def paramValueString = (param.defaultvalue != null) ? param.defaultvalue.toString() : ""
       env."${param.name}" = (param.type == "booleanParam") ? paramValueString.toBoolean() : paramValueString
     }
   }
