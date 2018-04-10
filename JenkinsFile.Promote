@@ -48,6 +48,7 @@ node {
         appVersion = appName.trim().replace("${appBaseName}-", "")
         echo "Pulled version ${appVersion} from ${env.PHASE_TWO_PCF_SPACE}"
       } else {
+        echo "Found hardcoded app version: `${appVersion}`"
         appName = "${appBaseName}-${appVersion}"
       }
       appName = appName.trim()
