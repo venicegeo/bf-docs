@@ -13,7 +13,7 @@ usage: bfalg-ndwi [-h] -i INPUT [-b BANDS BANDS] [--outdir OUTDIR]
                   [--minsize MINSIZE] [--close CLOSE] [--simple SIMPLE]
                   [--verbose VERBOSE] [--version]
 
-Beachfront Algorithm: NDWI (v1.0.3)
+Beachfront Algorithm: NDWI (v1.0.8)
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -52,7 +52,7 @@ This will apply the included buffered coastline (bfalg_ndwi/coastmask.shp) to th
 
 For Landsat8: If the BQA band is available, it can be provided which will mask out the clouds from the scene.
 
-    $ bfalg-ndwi -i LC80080282016215LGN00_B1.TIF LC80080282016215LGN00_B5.TIF --l8bqa LC80080282016215LGN00_BQA.TIF --basename LC80080282016215LGN00 --outdir LC80080282016215LGN00_test --coastmask
+    $ bfalg-ndwi -i LC80080282016215LGN00_B1.TIF -i LC80080282016215LGN00_B5.TIF --l8bqa LC80080282016215LGN00_BQA.TIF --basename LC80080282016215LGN00 --outdir LC80080282016215LGN00_test --coastmask
 
 The last three remaining parametes are tuning parameters involving the creation of the vector output.
 
@@ -74,3 +74,4 @@ The band names Green and NIR are what is referenced to in the online help. Howev
 | Landsat8      | 1 (Coastal)   | 5 (NIR)     |
 | RapidEye      | 2 (Green)     | 4 (NIR)     |
 | PlanetSceope  | 2 (Green)     | 4 (NIR)     |
+| Sentinel-2    | 2 (Blue)      | 8 (NIR)     |
