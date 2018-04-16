@@ -11,3 +11,5 @@ pages:
   - Beachfront: userguide/index.md
   - Algorithms: userguide/algorithms.md
   - Tide Prediction: userguide/tide-prediction.md
+- Release Notes:
+  - Version 2.0: release_notes/Version2.md
