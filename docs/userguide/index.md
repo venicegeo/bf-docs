@@ -42,11 +42,14 @@ Look under the _Select Algorithm_ section to see what algorithms are available. 
 
 ![screenshot](images/0005_select_algorithm_incompatible.png)
 
+<!-- TODO: I was not able to get the "incompatible image" screenshot when updating
+     screenshots, so an old screenshot is used here. We should fix this. --Filip -->
+
 ### 2. After Picking an Algorithm, Submit the Scene for Processing
 
 > __Note__: By default, Beachfront will name the job after the scene being processed.  You can optionally give a custom name to a job if desired.
 
-<!---->
+<!-- -->
 
 > __Note__: Algorithm processing time may vary depending on the size/age of the scene (i.e., bigger scenes require more time to process and older scenes require more time to request from archives) and the Beachfront system load at the time of execution.  If a scene takes longer to process than two hours, please contact the Beachfront team for technical support.
 
