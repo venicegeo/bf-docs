@@ -77,17 +77,20 @@ Selecting a job from the ___Jobs___ menu will pan and zoom the map to the job's 
 
 > __Note:__ If you select a job that is currently running, shoreline detections automatically appear once it successfully completes.  If this does not happen, please notify the Beachfront team for technical support.
 
+You can also view extra information about a particular job by expanding the job's
+row in the ___Jobs___ menu:
+
 ![screenshot](images/0009_selected_job_frame.png)
 
-### 4. Click on the Job's List Item Row to View More Details
+### 4. Click "Download" Button to Download Detections in QGIS compatible formats
 
-To view extra information about a particular job, expand the job's row in the ___Jobs___ menu:
+You can download the shoreline result in a few geospatial formats. They will
+each have a filename based on the source image. For example, using a Landsat8
+source:
 
-![screenshot](images/0010_job_details.png)
-
-### 5. Click "Download" Button to Download Detections as GeoJSON
-
-The GeoJSON file will have the same name as the job, e.g., `20170103_162024_1737916_RdEye-1.geojson`:
+-GeoJSON - `LC80150442018109LGN00.geojson`
+-GeoPackage - `LC80150442018109LGN00.gpkg`
+-Shapefile - `LC80150442018109LGN00.zip` (container for the multiple relevant files)
 
 ![screenshot](images/0011_download_job_geojson.png)
 
