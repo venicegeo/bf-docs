@@ -5,7 +5,7 @@
 
 ## Version 2.0
 
-Date and version number of current changes: 12 April 2018, v2.0
+Date and version number of current changes: 01 May 2018, v2.0
 
 Beachfront 2.0 builds on Beachfront 1.0 and Piazza and starts to combine the
 two applications into one finding efficiencies.  These release notes contain
@@ -116,7 +116,8 @@ The following additions and enhancements were made within the 2.0 release:
 #### Features or functionality retired in Beachfront 1.0:
 
 -   Piazza will no longer be refer to as a separate application.  By combining
-    the two applications, the architecture was simplified.
+    the two applications, the architecture was simplified. This has resulted
+    in better maintainability and faster development.
 
 
 #### Improvements from previous version:
@@ -126,6 +127,13 @@ The following additions and enhancements were made within the 2.0 release:
 ## System Requirements:
 
 Data exported from Beachfront 1.x is viewable in Boundless Desktop/QGIS, ArcGIS 10.3 (and later versions) with the Data Interoperability Extension, and GEOINT Viewer as GeoJSON and GeoPackage file formats
+
+Browser requirements for the Beachfront web user interface:
+
+-   **Recommended:** Chrome 55 and later
+-   Firefox 45 and later
+
+-----
 
 > **Additional Info**
 > For more information on the release, please use the Beachfront
