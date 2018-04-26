@@ -130,7 +130,7 @@ Browser requirements for the Beachfront web user interface:
 -   **Recommended:** Chrome 55 and later
 -   Firefox 45 and later
 
------
+------
 
 > **Additional Info**
 > For more information on the release, please use the Beachfront

@@ -43,19 +43,24 @@ provided to specify which bands in the file should be used. Otherwise it default
 to '1, 1', meaning it would use the same band for both Green and NIR. This example
 uses the first band in the file as the Green band and the fifth as the NIR.
 
-    $ bfalg-ndwi -i test1.tif -b 1 5
-
+```
+$ bfalg-ndwi -i test1.tif -b 1 5
+```
 If the INPUT parameter is provided twice for two filenames, then BANDS is the band
 number for the first file (Green) and the second file (NIR). This example uses
 the second band from the `test1.tif` as the Green band, and the first band from
 `test2.tif` as the NIR band.
 
-    $ bfalg-ndwi -i test1.tif -i test2.tif -b 2 1
+```
+$ bfalg-ndwi -i test1.tif -i test2.tif -b 2 1
+```
 
 Input files are all that are absolutely required, but a more typical scenario
 would look like this (using the CLI):
 
-    $ bfalg-ndwi -i scene123.tif -b 1 2 --basename testrun --outdir scene123-output --coastmask
+```
+$ bfalg-ndwi -i scene123.tif -b 1 2 --basename testrun --outdir scene123-output --coastmask
+```
 
 This will apply the included buffered coastline (`bfalg_ndwi/coastmask.shp`) to
 the image to mask out non-coastal regions. It will store all output files with
@@ -65,8 +70,9 @@ the name `testrun` (+ additional tag and extension, e.g. `testrun.geojson`,
 For Landsat8: If the BQA band is available, it can be provided which will mask
 out the clouds from the scene.
 
-    $ bfalg-ndwi -i LC80080282016215LGN00_B1.TIF -i LC80080282016215LGN00_B5.TIF --l8bqa LC80080282016215LGN00_BQA.TIF --basename LC80080282016215LGN00 --outdir LC80080282016215LGN00_test --coastmask
-
+```
+$ bfalg-ndwi -i LC80080282016215LGN00_B1.TIF -i LC80080282016215LGN00_B5.TIF --l8bqa LC80080282016215LGN00_BQA.TIF --basename LC80080282016215LGN00 --outdir LC80080282016215LGN00_test --coastmask
+```
 The last three remaining parametes are tuning parameters involving the creation
 of the vector output.
 
