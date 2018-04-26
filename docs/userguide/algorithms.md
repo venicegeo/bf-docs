@@ -70,20 +70,20 @@ out the clouds from the scene.
 The last three remaining parametes are tuning parameters involving the creation
 of the vector output.
 
--`minsize` (100): This is the minimum size a linestring should be before being
-  filtered out. This corresponds to the `potrace` [parameter](http://potrace.sourceforge.net/#usage)
-  `-t`/`--turdsize`, and is not the length of the line but rather some measure
-  of the extent of it. The default of 10 will not filter out many lines. For
-  Landsat, a value of 100 works well at removing false coasts, but may also
-  remove islands or smaller incomplete shorelines.
--`close` (5): Linestrings will be closed if their two endpoints are within this
-  number of pixels. The default is 5 and setting it to 0 will turn it off. This
-  should not be set to a value much higher than 10.
--`simplify` (None): Simplification will not be done by default. If provided, it
-  is in units of degrees and is used to simplify and smooth the output.
-  Simplification is heavily application and source imagery dependent, and is a
-  lossy process. Consider starting points for RapidEye and PlanetScope data to be
-  0.00035, and  0.0007 for Landsat8.
+-   `minsize` (100): This is the minimum size a linestring should be before being
+    filtered out. This corresponds to the `potrace` [parameter](http://potrace.sourceforge.net/#usage)
+    `-t`/`--turdsize`, and is not the length of the line but rather some measure
+    of the extent of it. The default of 10 will not filter out many lines. For
+    Landsat, a value of 100 works well at removing false coasts, but may also
+    remove islands or smaller incomplete shorelines.
+-   `close` (5): Linestrings will be closed if their two endpoints are within this
+    number of pixels. The default is 5 and setting it to 0 will turn it off. This
+    should not be set to a value much higher than 10.
+-   `simplify` (None): Simplification will not be done by default. If provided, it
+    is in units of degrees and is used to simplify and smooth the output.
+    Simplification is heavily application and source imagery dependent, and is a
+    lossy process. Consider starting points for RapidEye and PlanetScope data to be
+    0.00035, and  0.0007 for Landsat8.
 
 ### Band Combinations
 The traditional NDWI algorithm uses the Green and NIR bands to calculate a

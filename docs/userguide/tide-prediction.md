@@ -17,12 +17,12 @@ at the time the imagery was captured. For example:
 
 ### Why create a new tide service instead of using a third-party service?
 
-*Limited API access
-*Most services offer either historic tide data or predict future tides but not both
-*Cost - best services require user subscriptions
-*Query locations visible to third party
-*Inability to migrate to classified environment
-*Reliance on third party server availability
+*   Limited API access
+*   Most services offer either historic tide data or predict future tides but not both
+*   Cost - best services require user subscriptions
+*   Query locations visible to third party
+*   Inability to migrate to classified environment
+*   Reliance on third party server availability
 
 ## Operation
 
