@@ -10,7 +10,8 @@ The scene search is a part of the job creation workflow:
 
 ### 2. Draw a Bounding Box to Define the Search Space
 
-Drawing a bounding box is a two-click process.  Click once to drop the first corner and again to complete the bounding box:
+Drawing a bounding box is a two-click process.  Click once to drop the first
+corner and again to complete the bounding box:
 
 ![screenshot](images/0001_draw_bbox.png)
 
@@ -18,17 +19,22 @@ Drawing a bounding box is a two-click process.  Click once to drop the first cor
 
 > __Note:__ Dates should be entered in `YYYY-MM-DD` format, e.g., `2017-07-04`.
 
-Make any necessary adjustments to the imagery source, cloud cover, and date range, and then click on the _Search for Imagery_ button to execute a search using the selected filtering criteria:
+Make any necessary adjustments to the imagery source, cloud cover, and date
+range, and then click the _Search for Imagery_ button to execute a search using
+the selected filtering criteria:
 
 ![screenshot](images/0002_catalog_search_criteria.png)
 
-After a moment, footprints of the scenes found in the catalog should render on the map. You can readjust the filtering criteria and re-execute the search as many times as you need:
+After a moment, footprints of the scenes found in the catalog should render on
+the map. You can readjust the filtering criteria and re-execute the search as
+many times as you need:
 
 ![screenshot](images/0003_catalog_search_results.png)
 
-### 4. Click on a Scene's Footprint to Bring up Metadata and a Preview
+### 4. Click a Scene's Footprint to Bring up Metadata and a Preview
 
-> __Note__: If the full-color preview does not load on the map, please contact the Beachfront team for technical support.
+> __Note__: If the full-color preview does not load on the map, please contact
+> the Beachfront team for technical support.
 
 ![screenshot](images/0004_select_scene.png)
 
@@ -38,7 +44,8 @@ After a moment, footprints of the scenes found in the catalog should render on t
 
 ### 1. After Picking a Scene, Find a Compatible Algorithm
 
-Look under the _Select Algorithm_ section to see what algorithms are available.  Some algorithms have strict requirements in order to yield meaningful coastline vector data:
+Look under the _Select Algorithm_ section to see what algorithms are available.
+Some algorithms have strict requirements in order to yield meaningful coastline vector data:
 
 ![screenshot](images/0005_select_algorithm_incompatible.png)
 
@@ -47,11 +54,16 @@ Look under the _Select Algorithm_ section to see what algorithms are available. 
 
 ### 2. After Picking an Algorithm, Submit the Scene for Processing
 
-> __Note__: By default, Beachfront will name the job after the scene being processed.  You can optionally give a custom name to a job if desired.
+> __Note__: By default, Beachfront will name the job after the scene being
+> processed.  You can optionally give a custom name to a job if desired.
 
 <!-- -->
 
-> __Note__: Algorithm processing time may vary depending on the size/age of the scene (i.e., bigger scenes require more time to process and older scenes require more time to request from archives) and the Beachfront system load at the time of execution.  If a scene takes longer to process than two hours, please contact the Beachfront team for technical support.
+> __Note__: Algorithm processing time may vary depending on the size/age of the
+> scene (i.e., bigger scenes require more time to process and older scenes
+> require more time to request from archives), as well as the Beachfront system
+> load at the time of execution. If a scene takes longer to process than two
+> hours, please contact the Beachfront team for technical support.
 
 To submit the scene for algorithm processing, click the _Run Algorithm_ button:
 
@@ -61,7 +73,7 @@ To submit the scene for algorithm processing, click the _Run Algorithm_ button:
 
 ### 1. Navigate to the _Jobs_ Menu
 
-The ___Jobs___ menu will list the status and details for all jobs you are tracking:
+The _Jobs_ menu will list the status and details for all jobs you are tracking:
 
 ![screenshot](images/0007_navigate_to_jobs.png)
 
@@ -69,7 +81,7 @@ The ___Jobs___ menu will list the status and details for all jobs you are tracki
 
 > __Note:__ You can also click any visible job frame directly on the map to "select" it in the same way.
 
-Selecting a job from the ___Jobs___ menu will pan and zoom the map to the job's frame:
+Selecting a job from the _Jobs_ menu will pan and zoom the map to the job's frame:
 
 ![screenshot](images/0008_view_job_on_map.png)
 
@@ -78,7 +90,7 @@ Selecting a job from the ___Jobs___ menu will pan and zoom the map to the job's 
 > __Note:__ If you select a job that is currently running, shoreline detections automatically appear once it successfully completes.  If this does not happen, please notify the Beachfront team for technical support.
 
 You can also view extra information about a particular job by expanding the job's
-row in the ___Jobs___ menu:
+row in the _Jobs_ menu:
 
 ![screenshot](images/0009_selected_job_frame.png)
 
@@ -98,7 +110,7 @@ source:
 
 ### 1. Navigate to the _Jobs_ Menu
 
-The ___Jobs___ menu will list the status and details for all jobs you are tracking:
+The _Jobs_ menu will list the status and details for all jobs you are tracking:
 
 ![screenshot](images/0007_navigate_to_jobs.png)
 
