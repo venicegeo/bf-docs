@@ -88,9 +88,9 @@ You can download the shoreline result in a few geospatial formats. They will
 each have a filename based on the source image. For example, using a Landsat8
 source:
 
--GeoJSON - `LC80150442018109LGN00.geojson`
--GeoPackage - `LC80150442018109LGN00.gpkg`
--Shapefile - `LC80150442018109LGN00.zip` (container for the multiple relevant files)
+-   GeoJSON - `LC80150442018109LGN00.geojson`
+-   GeoPackage - `LC80150442018109LGN00.gpkg`
+-   Shapefile - `LC80150442018109LGN00.zip` (container for the multiple relevant files)
 
 ![screenshot](images/0011_download_job_geojson.png)
 
