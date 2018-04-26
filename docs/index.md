@@ -1,5 +1,5 @@
 <img src="userguide/images/logo_inverted.png" alt="Beachfront Logo" width="80%" style="margin-top:0; margin-bottom:0;" />
-# Beachfront | Automated Coastline Extraction
+# Automated Coastline Extraction
 
 ## What is Beachfront?
 
