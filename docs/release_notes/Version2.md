@@ -51,9 +51,6 @@ The following additions and enhancements were made within the 2.0 release:
 
 #### Single Scene Coastline Detection Job Execution (Register and Execute an Algorithm):
 
-<!-- XXX: Not actually supported in the UI -->
-<!-- -   Users can rename jobs if they choose (job name defaults to image Scene ID) -->
-
 -   Users can execute coastline detection using a NDWI-based Python algorithm
     combined with avectorization component in one detection service
 -   Beachfront fetches required Planet scene/tile analytic asset and stages for
