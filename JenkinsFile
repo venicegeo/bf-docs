@@ -109,7 +109,7 @@ node {
         }
 	  }
 	}
-	if(!env.SKIP_SCANS) {
+	if(!env.SKIP_SCANS.toBoolean()) {
 		withCredentials([[$class: 'StringBinding', credentialsId: "${env.THREADFIX_API_KEY}", variable: 'THREADFIX_KEY']]) {
 		  sh "mkdir -p ${root}/zap-out"
 		  sh """${zapHome}/zap.sh -cmd \
@@ -139,7 +139,7 @@ node {
 	}
   }
 
-  if(env.DEPLOY_PHASE_TWO) {
+  if(env.DEPLOY_PHASE_TWO.toBoolean()) {
 	  stage('Stage Deploy') {
 		if(!fileExists('.cf')) {
 		  sh "mkdir -p .cf"
@@ -161,7 +161,7 @@ node {
                         }
 		  }
 		}
-		if(!env.SKIP_SCANS) {
+		if(!env.SKIP_SCANS.toBoolean()) {
 			withCredentials([[$class: 'StringBinding', credentialsId: "${env.THREADFIX_API_KEY}", variable: 'THREADFIX_KEY']]) {
 			  sh "mkdir -p ${root}/zap-out"
 			  sh """${zapHome}/zap.sh -cmd \
