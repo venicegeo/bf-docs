@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Tide Prediction - Beachfront</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Beachfront</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../">Beachfront</a>
+</li>
+                            
+<li >
+    <a href="../algorithms/">Algorithms</a>
+</li>
+                            
+<li class="active">
+    <a href="./">Tide Prediction</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../release_notes/Version2/">Version 2.0</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../algorithms/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../release_notes/Version2/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#tide_prediction">Tide Prediction</a></li>
+            <li><a href="#description">Description</a></li>
+            <li><a href="#operation">Operation</a></li>
+            <li><a href="#algorithm">Algorithm</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="tide_prediction">Tide Prediction<a class="headerlink" href="#tide_prediction" title="Permanent link">&para;</a></h1>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p>Bf-tideprediction is a Beachfront service that estimates the tide level for a
+given date/time, as well as the 24-hour min/max tides and corresponding times
+surrounding that date/time.  This service is used by Beachfront to provide
+contextual information to be used in conjunction with Beachfront’s shoreline
+extraction services.</p>
+<h3 id="why_are_tides_important_for_shoreline_extraction">Why are tides important for shoreline extraction?<a class="headerlink" href="#why_are_tides_important_for_shoreline_extraction" title="Permanent link">&para;</a></h3>
+<p>The shoreline can be drastically different depending on the status of the tides
+at the time the imagery was captured. For example:</p>
+<p><img alt="Examples of Beachfront Shoreline extraction at high tide vs low tide" src="../images/image07.png" /></p>
+<h3 id="why_create_a_new_tide_service_instead_of_using_a_third-party_service">Why create a new tide service instead of using a third-party service?<a class="headerlink" href="#why_create_a_new_tide_service_instead_of_using_a_third-party_service" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Limited API access</li>
+<li>Most services offer either historic tide data or predict future tides but not both</li>
+<li>Cost - best services require user subscriptions</li>
+<li>Query locations visible to third party</li>
+<li>Inability to migrate to classified environment</li>
+<li>Reliance on third party server availability</li>
+</ul>
+<h2 id="operation">Operation<a class="headerlink" href="#operation" title="Permanent link">&para;</a></h2>
+<p>Bf-tideprediction works in both individual and batch modes.</p>
+<h3 id="individual_query_mode">Individual Query Mode:<a class="headerlink" href="#individual_query_mode" title="Permanent link">&para;</a></h3>
+<h4 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h4>
+<p>The individual mode has an API endpoint of
+<a href="https://bf-tideprediction.geointservices.io">https://bf-tideprediction.geointservices.io</a> and accepts the following keys
+in a POST request:</p>
+<table>
+<thead>
+<tr>
+<th>Keys</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lat</td>
+<td>decimal degrees between -90 and 90</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>decimal degrees between -180 and 180</td>
+</tr>
+<tr>
+<td>dtg</td>
+<td>Date/Time in format : YYYY-MM-DD-HH-MM (Universal Standard Time)</td>
+</tr>
+</tbody>
+</table>
+<p>Sample Query:</p>
+<pre><code>curl -X POST -d 'lat=-33.85&amp;lon=151&amp;dtg=2016-05-31-0-1' &quot;https://bf-tideprediction.geointservices.io/&quot;
+</code></pre>
+
+<h4 id="web_interface">Web Interface<a class="headerlink" href="#web_interface" title="Permanent link">&para;</a></h4>
+<p>The individual query mode also has a web-based form.  Enter coordinates in
+decimal degrees, and provide the date and time in the format <code>YYYY-mm-DD-HH-MM</code>
+in UST.  Select “Calculate” and the results will be returned in the browser as
+a json file.</p>
+<p><img alt="Tides UI Example" src="../images/image04.png" /></p>
+<h3 id="batch_queries">Batch Queries<a class="headerlink" href="#batch_queries" title="Permanent link">&para;</a></h3>
+<p>The API also supports querying for batch collections of locations. To do so,
+use a JSON body structured in this way:</p>
+<pre><code class="json">{
+  &quot;locations&quot;: [
+    {
+      &quot;dtg&quot;: &quot;some_dtg1&quot;,
+      &quot;lat&quot;: &quot;some_lat1&quot;,
+      &quot;lon&quot;: &quot;some_lon1&quot;
+    },
+    {
+      &quot;dtg&quot;: &quot;some_dtg2&quot;,
+      &quot;lat&quot;: &quot;some_lat2&quot;,
+      &quot;lon&quot;: &quot;some_lon2&quot;
+    }
+  ]
+}
+</code></pre>
+
+<p>Sample Query:</p>
+<pre><code>curl -X POST -H &quot;Content-Type: application/json&quot;  -d '{&quot;locations&quot;: [{&quot;lat&quot;: \73.63008647322661, &quot;lon&quot;: -81.5557487110026, &quot;dtg&quot;: &quot;2015-12-20-09-36&quot;}]}' &quot;https://tideprediction.stage.geointservices.io/tides&quot;
+</code></pre>
+
+<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
+<p>Beachfront’s Tide Prediction service utilizes the Python library
+<a href="https://github.com/sam-cox/pytides"><code>pytides</code></a> to predict past and future
+tides.  These predictions are based upon harmonic constituents estimated from
+historical sea level buoy data. The service accepts a latitude/longitude pair
+and a Date Time Group (DTG) and returns the current tide level at that time, as
+well as the minimum and maximum of the 24-hour period following the time.</p>
+<p>According to their documentation, <code>pytide</code>&lsquo;s tidal prediction is based upon
+several fundamental assumptions.  The first assumption is that tides anywhere
+on Earth are caused solely by the gravitational forces of the moon and the sun.
+Pytides neglects the gravitational forces of other planetary bodies, as their
+effect on the tide is several orders of magnitude weaker than those of the moon
+and sun.  The second assumption is that for any given location on Earth, there
+exists constant values such that the tide there obeys this relation.  So if we
+have many past measurements of the tide at a given location, we can attempt to
+choose values that best fit our previous readings. By assumption, we can then
+predict the future tide by allowing it to increase into the future.</p>
+<p><img alt="Example showing Tide prediction results compared to actual measurements" src="../images/image09.png" /></p>
+<p>Beachfront&rsquo;s Tide Prediction service obtains these historic measurements by
+querying the GLOSS buoy network.  The service takes latitude and longitude
+coordinates, as well as a DTG.  A lookup table hosted by bf-tideprediction
+calculates the station ID for the appropriate sea level monitoring stations.
+Utilizing a locally stored database of historic sea level data, constituents
+are calculated for each appropriate station.  The tides are then predicted for
+those stations in a 24 hour period surrounding the image DTG on a minute by
+minute basis.  These data points are interpolated to provide sea level height
+for the image DTG, and a minimum and maximum tide height for a given time
+period.</p>
+<p><img alt="Gloss Buoy Locations" src="../images/image08.png" /></p>
+<h6 id="gloss_buoy_locations">Gloss Buoy Locations<a class="headerlink" href="#gloss_buoy_locations" title="Permanent link">&para;</a></h6>
+<p><img alt="Density Map of Gloss Buoy Locations" src="../images/image11.png" /></p>
+<h6 id="density_map_of_gloss_buoy_locations">Density Map of Gloss Buoy Locations<a class="headerlink" href="#density_map_of_gloss_buoy_locations" title="Permanent link">&para;</a></h6>
+<p>A lookup table hosted by <code>bf-tideprediction</code> calculates the station ID for the
+appropriate sea level monitoring stations by querying the coordinates against a
+pre-computed set of Voronoi polygons.  In mathematics, a Voronoi diagram is a
+partitioning of a plane into regions based on distance to points in a specific
+subset of the plane.  For each initial point (or seed), there is a
+corresponding polygon consisting of all points closer to that seed than to any
+other. These regions are called Voronoi cells.  For the Beachfront Tide
+Prediction service, a one-time calculation of Voronoi polygons was generated
+for the Gloss Buoy data.  For a given coordinate, the corresponding known point
+is queried  This is simpler than triangulating between the points of a Delaunay
+triangle, but may be less accurate as its based on a single known point.</p>
+<p><img alt="Voronoi Polygon Example" src="../images/image13.png" /></p>
+<blockquote>
+<p>Source: <a href="https://commons.wikimedia.org/wiki/File:Euclidean_Voronoi_diagram.svg">https://commons.wikimedia.org/wiki/File:Euclidean_Voronoi_diagram.svg</a></p>
+</blockquote></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '../..';</script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/require.js"></script>
+        <script src="../../search/search.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&larr;</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&rarr;</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </body>
+</html>
