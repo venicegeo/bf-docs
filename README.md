@@ -6,8 +6,29 @@ This repository contains the markdown source for Beachfront documentation.
 
 ## Table of Contents
 
-* [Building HTML Documentation](#building-html-documentation)
-* [Documentation Authors](#documentation-authors)
+*   [Manual Pre-build Process](#manual-pre-build-process)
+*   [Building HTML Documentation](#building-html-documentation)
+*   [Documentation Authors](#documentation-authors)
+
+## Manual Pre-build Process
+
+To simplify dependency management in Jenkins pipelines, the procedure for
+building and deploying `bf-docs` involves manually generating the built (HTML)
+documentation locally, then checking it in. Observe the following steps to
+update documentation:
+
+1.  Perform your edits to the documentation source in `docs/` using a separate
+    feature branch
+2.  Merge your feature branch into the `build` branch, using an approved pull
+    request
+3.  Using the `build` branch, run `mkdocs build` to update the `site/` dir
+4.  Merge the `build` branch into `master` to update `master`'s  `site/`
+
+In this way, `master` only ever contains pre-built documentation artifacts,
+along with any files needed to deploy it.
+
+> **Note:**  if your documentation update involves adding new source files,
+> make sure to create additional appropriate commits in `master` to delete them.
 
 ## Building HTML Documentation
 
