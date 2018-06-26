@@ -1,593 +1,528 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Metrics - Beachfront</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
 
-		<link rel="shortcut icon" href="../../img/favicon.ico">
-		<title>User's Guide - Metrics - Beachfront</title>
-		<link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-		<link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
-		<link href="../../css/base.css" rel="stylesheet">
-		<link rel="stylesheet" href="../../css/highlight.css">
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-		            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-		        <![endif]-->
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script> 
+    </head>
 
-		<script src="../../js/jquery-1.10.2.min.js"></script>
-		<script src="../../js/bootstrap-3.0.3.min.js"></script>
-		<script src="../../js/highlight.pack.js"></script>
-	</head>
+    <body>
 
-	<body>
-		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-			<div class="container">
-				<!-- Collapsed navigation -->
-				<div class="navbar-header">
-					<!-- Expander button -->
-					<button type="button" class="navbar-toggle" data-toggle="collapse"
-						data-target=".navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="../..">Beachfront</a>
-				</div>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
 
-				<!-- Expanded navigation -->
-				<div class="navbar-collapse collapse">
-					<!-- Main navigation -->
-					<ul class="nav navbar-nav">
-						<li><a href="../..">Home</a></li>
-						<li class="dropdown active"><a href="#"
-							class="dropdown-toggle" data-toggle="dropdown">User Guide <b
-								class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="../">Beachfront</a></li>
-								<li><a href="../algorithms/">Algorithms</a></li>
-								<li><a href="../tide-prediction/">Tide Prediction</a></li>
-								<li class="active"><a href="./">Metrics</a></li>
-							</ul></li>
-						<li class="dropdown"><a href="#" class="dropdown-toggle"
-							data-toggle="dropdown">Release Notes <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="../../release_notes/Version2/">Version 2</a></li>
-							</ul></li>
-					</ul>
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Beachfront</a>
+        </div>
 
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#" data-toggle="modal"
-							data-target="#mkdocs_search_modal"> <i class="fa fa-search"></i>
-								Search
-						</a></li>
-						<li><a rel="next" href="../algorithms/"> <i
-								class="fa fa-arrow-left"></i> Previous
-						</a></li>
-						<li><a rel="prev" href="../../release_notes/Version2/">
-								Next <i class="fa fa-arrow-right"></i>
-						</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../">Beachfront</a>
+</li>
+                            
+<li >
+    <a href="../algorithms/">Algorithms</a>
+</li>
+                            
+<li >
+    <a href="../tide-prediction/">Tide Prediction</a>
+</li>
+                            
+<li class="active">
+    <a href="./">Metrics</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../release_notes/Version2/">Version 2.0</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
 
-		<div class="container">
-			<div class="col-md-3">
-				<div class="bs-sidebar hidden-print affix well" role="complementary">
-					<ul class="nav bs-sidenav">
-						<li class="main active"><a href="#metrics">Metrics</a></li>
-						<li><a href="#introduction">Introduction</a></li>
-						<li><a href="#assumptions_requirements">Assumptions & Requirements</a></li>
-						<li><a href="#relevant_urls">Relevant URL’s</a></li>
-						<li><a href="#kibana_application_overview">Kibana Application Overview</a></li>
-						<li><a href="#accessing_metrics">Accessing Beachfront Metrics</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-md-9" role="main">
-				<h1 id="metrics">Metrics<a class="headerlink" href="#metrics" title="Permanent link">&para;</a>
-				</h1>
-				<h2 id="introduction">
-					Introduction<a class="headerlink" href="#introduction"
-						title="Permanent link">&para;</a>
-				</h2>
-				<p>Beachfront is a set of open-source cloud services that enables
-					users to leverage detection algorithms and imagery sources to update
-					global coastline vectors. Users can exploit third-party imagery data
-					using detection algorithms to generate coastline vector data. It
-					provides users the ability to automatically extract large sections
-					of coastline to produce timely, dynamic data in support of multiple
-					communities using the best-available source imagery. Although
-					intended for shorelines, Beachfront can be modified to serve other
-					feature communities of interest to assist in automated feature and
-					object detection if other algorithms are available.</p>
-				<p>The purpose of this guide is to serve as a walkthrough for
-					getting access to metrics dashboards, which can provide useful
-					details relating to, though not limited to, the following details:</p>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../tide-prediction/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../release_notes/Version2/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-				<table>
-					<thead>
-						<tr>
-							<th width="250px">Requirement</th>
-							<th>Description of Purpose</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Beachfront application users</td>
-							<td>Providing an understanding of who is engaging with Beachfront</td>
-						</tr>
-						<tr>
-							<td>Organizations represented from recent users</td>
-							<td>This provides an understanding of, not only who, though which unique groups or missions Beachfront is helping</td>
-						</tr>
-						<tr>
-							<td>Successful and unsuccessful login attempts</td>
-							<td>This provides an important note if the system is experiencing repeated login rejections and why.</td>
-						</tr>
-						<tr>
-							<td>Application uptime & downtime</td>
-							<td>Providing an overview of the system dependability and reliability as an operational environment.</td>
-						</tr>
-						<tr>
-							<td>Processing times</td>
-							<td>Provides an understanding of how long the system is taking to process each job, so the appropriate expectations can be formed for users interacting with Beachfront.</td>
-						</tr>
-						<tr>
-							<td>Areas of Interest (AOI) Visited</td>
-							<td>This provides application owners the ability to understand what areas of interest (AOI) analysts are using Beachfront to look at.</td>
-						</tr>
-						<tr>
-							<td>Requested Image Types</td>
-							<td>This provides an understanding of which types of information are relevant to what users are requesting</td>
-						</tr>
-						<tr>
-							<td>Processing Request Details</td>
-							<td>This provides an understanding, particularly from a system perspective, for how well Beachfront is performing, as well as how many job requests are succeeding compared to how many are failing.</td>
-						</tr>
-						<tr>
-							<td>Number of Image Requests</td>
-							<td>This provides an understanding of whether or not the users are finding relevant responses through Beachfront</td>
-						</tr>
-						<tr>
-							<td>Cloud Cover Requests</td>
-							<td>This provides developmental metrics for what cloud cover levels are preferred.</td>
-						</tr>
-						<tr>
-							<td>New Beachfront users compared to existing Beachfront users</td>
-							<td>This provides context to Beachfront for how many new and pre-existing users are engaging with the system, in order to gauge an understanding for how well mission outreach is performing, along with understanding if users are finding what they are looking for in order to being retained and want to return.</td>
-						</tr>
-						<tr>
-							<td>Scene Size</td>
-							<td>Knowing the file size of the image is a baseline statistic to help Beachfront determine what resource requirements are needed to process a scene.</td>
-						</tr>
-						<tr>
-							<td>Geographic Scene Size</td>
-							<td>This metric is to be collected for resource planning and other business analytics. This metric might be used help determine performance and how much information we are processing in a certain period of time.</td>
-						</tr>
-						<tr>
-							<td>Activation Time</td>
-							<td>This metric helps understand how long Beachfront is taking to activate jobs for a particular data provider</td>
-						</tr>
-						<tr>
-							<td>Output Size</td>
-							<td>This metric will help us understand how much data is being stored for each coastline produced.</td>
-						</tr>
-						<tr>
-							<td>Maximum Memory Usage (PCF)</td>
-							<td>This helps us understand what memory utilization is required in order to better allocate more appropriate resources to services.</td>
-						</tr>
-						<tr>
-							<td>Maximum Disk Space (PCF)</td>
-							<td>This helps us understand what disk space utilization is required in order to better allocate more appropriate resources to services.</td>
-						</tr>
-					</tbody>
-				</table>
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#metrics">Metrics</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#assumptions_requirements">Assumptions &amp; Requirements</a></li>
+            <li><a href="#relevant_urls">Relevant URL’s</a></li>
+            <li><a href="#kibana_application_overview">Kibana Application Overview</a></li>
+            <li><a href="#accessing_beachfront_metrics">Accessing Beachfront Metrics</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
 
-				<h2 id="assumptions_requirements">
-					Assumptions & Requirements<a class="headerlink" href="#assumptions_requirements"
-						title="Permanent link">&para;</a>
-				</h2>
-				<p>Prior to navigating this guide, the following assumptions and requirements are made:
-					<ol>
-						<li>Each user has access to a computer or tablet/mobile device with web browsing functionality available.</li>
-						<li>Each user has an active account and valid credentials for accessing and logging into the Kibana application.</li>
-						<li>Each user has an account with the appropriate privileges for accessing the necessary datasets, within the necessary environments.</li>
-						<li>Kibana is available within the environment interested in, and has already been configured with Beachfront metrics capabilities</li>
-					</ol>
-				</p>
+<style>
+table:nth-of-type(1) {
+    display:table;
+    width:100%;
+}
+table:nth-of-type(1) th:nth-of-type(2) {
+    width:70%;
+}
 
-				<h2 id="relevant_urls">
-					Relevant URL’s<a class="headerlink" href="#relevant_urls"
-						title="Permanent link">&para;</a>
-				</h2>
-				<p>The table below lists URL to each of the primary Beachfront environments.</p>
-				<table>
-					<thead>
-						<td>Environment</td>
-						<td>Component</td>
-						<td>URL</td>
-					</thead>
-					<tbody>
-						<tr>
-							<td rowspan="2">L2 (.io)</td>
-							<td>Kibana</td>
-							<td><a target="_blank" href="https://logsearch.system.dev.east.paas.geointservices.io/app/kibana">https://logsearch.system.dev.east.paas.geointservices.io/app/kibana</a></td>
-						</tr>
-						<tr>
-							<td>Pivotal Cloud Foundry</td>
-							<td><a a target="_blank" href="https://apps.system.dev.east.paas.geointservices.io/">https://apps.system.dev.east.paas.geointservices.io/</a></td>
-						</tr>
-						<tr>
-							<td>L4 (.mil)</td>
-							<td>Kibana</td>
-							<td><a target="_blank" href="https://logsearch.ops.east.paas.nga.mil/app/kibana">https://logsearch.ops.east.paas.nga.mil/app/kibana</a></td>
-						</tr>
-					</tbody>
-				</table>
+.col-md-9 img {
+   margin-top:10px;
+   margin-bottom:15px;
+   margin-left:35px;
+   margin-right:100%;
+   float: left;
+}
+.col-md-9 img[alt=login]              { width: 300px; }
+.col-md-9 img[alt=EnvironmentSpaces]  { width: 200px; }
+.col-md-9 img[alt=FilterApplied]      { width: 200px; }
+.col-md-9 img[alt=HoveringOverFilter] { width: 200px; }
+.col-md-9 img[alt=DashboardMenuIcon]  { width: 150px; }
+</style>
 
-				<h2 id="kibana_application_overview">
-					Kibana Application Overview<a class="headerlink" href="#kibana_application_overview"
-						title="Permanent link">&para;</a>
-				</h2>
-				<p>Beachfront currently uses the Kibana/Logsearch application for displaying metrics, which is made available through GeoIntServices. While this guide will make the effort to provide a thorough understanding of the Beachfront metrics capabilities that are made available, it is important to note that this guide is not intended to provide an exhaustive understanding or overview of how to use the entirety of the Kibana/Logsearch application. As more metrics-specific capabilities are rolled out, this document will be updated to reflect these changes/updates.</p>
-				<p>For an official overview or tutorial on using Kibana/Logsearch, users can navigate to the official Kibana <a a target="_blank" href="https://www.elastic.co/products/kibana">website</a> and <a a target="_blank" href="https://www.elastic.co/guide/en/kibana/current/getting-started.html">getting-started-guide</a>.
+<h1 id="metrics">Metrics<a class="headerlink" href="#metrics" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Beachfront is a set of open-source cloud services that enables users to leverage detection algorithms and imagery sources to update global coastline vectors. Users can exploit third-party imagery data using detection algorithms to generate coastline vector data. It provides users the ability to automatically extract large sections of coastline to produce timely, dynamic data in support of multiple communities using the best-available source imagery. Although intended for shorelines, Beachfront can be modified to serve other feature communities of interest to assist in automated feature and object detection if other algorithms are available.</p>
+<p>The purpose of this guide is to serve as a walkthrough for getting access to metrics dashboards, which can provide useful details relating to, though not limited to, the following details:</p>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Description of Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beachfront application users</td>
+<td>Providing an understanding of who is engaging with Beachfront.</td>
+</tr>
+<tr>
+<td>Organizations represented from recent users</td>
+<td>This provides an understanding of, not only who, though which unique groups or missions Beachfront is helping.</td>
+</tr>
+<tr>
+<td>Successful and unsuccessful login attempts</td>
+<td>This provides an important note if the system is experiencing repeated login rejections and why.</td>
+</tr>
+<tr>
+<td>Application uptime &amp; downtime</td>
+<td>Providing an overview of the system dependability and reliability as an operational environment.</td>
+</tr>
+<tr>
+<td>Processing times</td>
+<td>Provides an understanding of how long the system is taking to process each job, so the appropriate expectations can be formed for users interacting with Beachfront.</td>
+</tr>
+<tr>
+<td>Areas of Interest (AOI) Visited</td>
+<td>This provides application owners the ability to understand what areas of interest (AOI) analysts are using Beachfront to look at.</td>
+</tr>
+<tr>
+<td>Requested Image Types</td>
+<td>This provides an understanding of which types of information are relevant to what users are requesting</td>
+</tr>
+<tr>
+<td>Processing Request Details</td>
+<td>This provides an understanding, particularly from a system perspective, for how well Beachfront is performing, as well as how many job requests are succeeding compared to how many are failing.</td>
+</tr>
+<tr>
+<td>Number of Image Requests</td>
+<td>This provides an understanding of whether or not the users are finding relevant responses through Beachfront</td>
+</tr>
+<tr>
+<td>Cloud Cover Requests</td>
+<td>This provides developmental metrics for what cloud cover levels are preferred.</td>
+</tr>
+<tr>
+<td>New Beachfront users compared to existing Beachfront users</td>
+<td>This provides context to Beachfront for how many new and pre-existing users are engaging with the system, in order to gauge an understanding for how well mission outreach is performing, along with understanding if users are finding what they are looking for in order to being retained and want to return.</td>
+</tr>
+<tr>
+<td>Scene Size</td>
+<td>Knowing the file size of the image is a baseline statistic to help Beachfront determine what resource requirements are needed to process a scene.</td>
+</tr>
+<tr>
+<td>Geographic Scene Size</td>
+<td>This metric is to be collected for resource planning and other business analytics. This metric might be used help determine performance and how much information we are processing in a certain period of time.</td>
+</tr>
+<tr>
+<td>Activation Time</td>
+<td>This metric helps understand how long Beachfront is taking to activate jobs for a particular data provider</td>
+</tr>
+<tr>
+<td>Output Size</td>
+<td>This metric will help us understand how much data is being stored for each coastline produced.</td>
+</tr>
+<tr>
+<td>Maximum Memory Usage (PCF)</td>
+<td>This helps us understand what memory utilization is required in order to better allocate more appropriate resources to services.</td>
+</tr>
+<tr>
+<td>Maximum Disk Space (PCF)</td>
+<td>This helps us understand what disk space utilization is required in order to better allocate more appropriate resources to services.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="assumptions_requirements">Assumptions &amp; Requirements<a class="headerlink" href="#assumptions_requirements" title="Permanent link">&para;</a></h2>
+<p>Prior to navigating this guide, the following assumptions and requirements are made:</p>
+<ul>
+<li>Each user has access to a computer or tablet/mobile device with web browsing functionality available.</li>
+<li>Each user has an active account and valid credentials for accessing and logging into the Kibana application.</li>
+<li>Each user has an account with the appropriate privileges for accessing the necessary datasets, within the necessary environments.</li>
+<li>Kibana is available within the environment interested in, and has already been configured with Beachfront metrics capabilities</li>
+</ul>
+<h2 id="relevant_urls">Relevant URL’s<a class="headerlink" href="#relevant_urls" title="Permanent link">&para;</a></h2>
+<p>The table below lists URL to each of the primary Beachfront environments.</p>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>Component</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L2 (.io)</td>
+<td>Kibana</td>
+<td><a href="https://logsearch.system.dev.east.paas.geointservices.io/app/kibana">https://logsearch.system.dev.east.paas.geointservices.io/app/kibana</a></td>
+</tr>
+<tr>
+<td>L2 (.io)</td>
+<td>Pivotal Cloud Foundry</td>
+<td><a href="https://apps.system.dev.east.paas.geointservices.io">https://apps.system.dev.east.paas.geointservices.io</a></td>
+</tr>
+<tr>
+<td>L4 (.mil)</td>
+<td>Kibana</td>
+<td><a href="https://logsearch.ops.east.paas.nga.mil/app/kibana">https://logsearch.ops.east.paas.nga.mil/app/kibana</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="kibana_application_overview">Kibana Application Overview<a class="headerlink" href="#kibana_application_overview" title="Permanent link">&para;</a></h2>
+<p>Beachfront currently uses the Kibana/Logsearch application for displaying metrics, which is made available through GeoIntServices. While this guide will make the effort to provide a thorough understanding of the Beachfront metrics capabilities that are made available, it is important to note that this guide is not intended to provide an exhaustive understanding or overview of how to use the entirety of the Kibana/Logsearch application. As more metrics-specific capabilities are rolled out, this document will be updated to reflect these changes/updates.</p>
+<p>For an official overview or tutorial on using Kibana/Logsearch, users can navigate to the official Kibana <a href="https://www.elastic.co/products/kibana">website</a> and <a href="https://www.elastic.co/guide/en/kibana/current/getting-started.html">getting-started-guide</a>.</p>
+<h3 id="accessing_kibana">Accessing Kibana<a class="headerlink" href="#accessing_kibana" title="Permanent link">&para;</a></h3>
+<p>To access kibana, users can follow the steps below:</p>
+<ol>
+<li>Open a web browser on a computer or tablet/mobile device.</li>
+<li>Navigate to the kibana URL of the environment interested in viewing.</li>
+<li>
+<p>A login screen will appear
+<img alt="login" src="../images/metrics/image2.png" title="Pivotal Login Screen" /></p>
+</li>
+<li>
+<p>Enter email/username and password for your user account, and select the ‘SIGN IN’ button. Once logged in with valid environment-specific credentials, you will be navigated to the kibana main page.</p>
+</li>
+</ol>
+<h3 id="kibana_overview">Kibana Overview<a class="headerlink" href="#kibana_overview" title="Permanent link">&para;</a></h3>
+<p>Kibana has several components. At the core, users will mainly interact with kibana through 2-3 components: search (discover), visualizations, and dashboard.</p>
+<h4 id="discover">Discover<a class="headerlink" href="#discover" title="Permanent link">&para;</a></h4>
+<p>The discover section allows for searching through the data. This provides the data in a more table-like format, for looking at specific records, as well as filtering to look at specific fields. For more details on the discover section, users can reference the Elastic <a href="https://www.elastic.co/guide/en/kibana/current/discover.html">website</a> discovery details page.</p>
+<h4 id="visualizations">Visualizations<a class="headerlink" href="#visualizations" title="Permanent link">&para;</a></h4>
+<p>The visualizations section allows data fields to be transformed into a more visual representation, rather than a table-like display. For more details on the discover section, users can reference the Elastic <a href="https://www.elastic.co/guide/en/kibana/current/visualizations.html">website visualizations details page</a>.</p>
+<h4 id="dashboards">Dashboards<a class="headerlink" href="#dashboards" title="Permanent link">&para;</a></h4>
+<p>The dashboards section allows saved visualizations and/or saved searches to be grouped and organized into common layouts. For more details on the discover section, users can reference the Elastic <a href="https://www.elastic.co/guide/en/kibana/current/dashboards.html">website dashboards details page</a>.</p>
+<h2 id="accessing_beachfront_metrics">Accessing Beachfront Metrics<a class="headerlink" href="#accessing_beachfront_metrics" title="Permanent link">&para;</a></h2>
+<p>Beachfront metrics dashboards can be accessed by following the steps below:</p>
+<ol>
+<li>Select the “Dashboard” section from within the kibana navigation panel on the left-hand side of the screen.
+<img alt="DashboardMenuIcon" src="../images/metrics/image6.png" title="Dashboard menu icon" /></li>
+<li>
+<p>This will open the main dashboards screen, with a table showing all saved dashboards.</p>
+<p>Beachfront currently has the following metrics dashboards available:</p>
+<ul>
+<li><a href="">Beachfront User Metrics</a> &nbsp;&nbsp;&nbsp; Metrics related to users accessing Beachfront</li>
+<li><a href="">Beachfront Jobs Metrics</a> &nbsp;&nbsp;&nbsp; Metrics related to jobs run on Beachfront, as well as any statistics related</li>
+</ul>
+</li>
+</ol>
+<p>NOTE:</p>
+<p>All environments provide the ability to look at all respective environments, as well as filtering to look at one specific environment. To learn about how to apply environment filtering, please reference the Environment Filtering in Dashboards section.</p>
+<h3 id="beachfront_user_metrics">Beachfront User Metrics<a class="headerlink" href="#beachfront_user_metrics" title="Permanent link">&para;</a></h3>
+<p>The User metrics dashboard serves the purpose of displaying user-related metrics, such as who has used Beachfront (and how often or how recently), or which organizations, units, and countries are represented by those users. The image below displays an example of what the User metrics dashboard consists of.
+<img alt="UserMetricsDashboard" src="../images/metrics/image9.png" title="User Metrics Dashboard" /></p>
+<p>The user metrics dashboard is organized with the following components:</p>
+<table>
+<thead>
+<tr>
+<th>Dashboard Component</th>
+<th>Description / Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UniqueSpaces</td>
+<td>The different spaces within the environment, with a pie chart breakdown of the percentage of events from each, over the selected time period. To look at just the events for a specific space (i.e. int, test, prod, etc), click on that part of the pie chart.</td>
+</tr>
+<tr>
+<td>UserMostRecentLogins</td>
+<td>This provides a list of the users (certificate distinguished names) who have logged into Beachfront, along with a count of the number of times they logged in, and the most recent date/time they logged in, over the selected time period.</td>
+</tr>
+<tr>
+<td>TotalUniqueUserLogins</td>
+<td>Provides a numerical count representation for the number of unique users that have used Beachfront over the selected time period.</td>
+</tr>
+<tr>
+<td>AuthLoginStatus</td>
+<td>Provides a breakdown of the successful and failed login attempts within Beachfront over the selected time period.</td>
+</tr>
+<tr>
+<td>UniqueCountryCounts</td>
+<td>This provides a breakdown of the unique countries represented by the users that have used Beachfront over the selected time period.</td>
+</tr>
+<tr>
+<td>OrgUnitCounts</td>
+<td>This provides a breakdown of the unique organizational units represented by the users that have used Beachfront over the selected time period. This provides a breakdown for any entities within the respective organization that the user is a part of (i.e. NGA, DoD, etc).</td>
+</tr>
+<tr>
+<td>OrganizationCounts</td>
+<td>This provides a breakdown of the unique organizations represented by the users that have used Beachfront over the selected time period.</td>
+</tr>
+<tr>
+<td>NewExistingUserLoginsCount</td>
+<td>Provides a side-by-side comparison of the number of existing users, compared to the number of first-time users within Beachfront over the selected time period.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="beachfront_jobs_metrics">Beachfront Jobs Metrics<a class="headerlink" href="#beachfront_jobs_metrics" title="Permanent link">&para;</a></h3>
+<p>The Jobs metrics dashboard serves the purpose of displaying job and system related information about Beachfront over the selected time period. The image below displays an example of what the Jobs metrics dashboard consists of.
+<img alt="JobsMetricsDashboard" src="../images/metrics/image10.png" title="Jobs Metrics Dashboard" /></p>
+<p>The jobs metrics dashboard displays the following components:</p>
+<table>
+<thead>
+<tr>
+<th>Dashboard Component</th>
+<th>Description / Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UniqueSpaces</td>
+<td>The different spaces within the environment, with a pie chart breakdown of the percentage of events from each, over the selected time period. To look at just the events for a specific space (i.e. int, test, prod, etc), click on that part of the pie chart.</td>
+</tr>
+<tr>
+<td>JobRequestsCount</td>
+<td>This specifies the total number of jobs which have been requested over the specified time period. It is important to note that this number is explicitly for the number of jobs requested, not finished.</td>
+</tr>
+<tr>
+<td>JobsCount</td>
+<td>This provides a side-by-side breakdown for the number of jobs which have completed successfully compared to those which have resulted in an error.</td>
+</tr>
+<tr>
+<td>ItemTypesRequested</td>
+<td>This provides a table representation for the various imagery item types which were requested by users when a job was requested.</td>
+</tr>
+<tr>
+<td>AreasOfInterestRequested</td>
+<td>This provides a table representation for the various areas of interest (AOI) which were requested by users when a job was requested.</td>
+</tr>
+<tr>
+<td>AverageJobCompletionTime</td>
+<td>This specifies the average amount time (in minutes) it took jobs to complete processing.</td>
+</tr>
+<tr>
+<td>AverageJobActivationTime</td>
+<td>This specifies the average amount time (in seconds) it took jobs to complete activation.</td>
+</tr>
+<tr>
+<td>CompletedJobsStatus</td>
+<td>This provides the status for each job and how it completed after being run. It also lists the amount of time it took for the job to run.</td>
+</tr>
+<tr>
+<td>UptimeDowntime</td>
+<td>This provides a graph outlining when the system was up or down, over the specified time period. When certain times show a count of 0, that represents a time-period when the system was not available.</td>
+</tr>
+<tr>
+<td>AverageSceneSizeGeographicArea</td>
+<td>This is used to help determine performance and how much information we are processing in a certain period of time</td>
+</tr>
+<tr>
+<td>AverageGeoJSONSize</td>
+<td>This metric will help us understand how much data is being stored for each coastline produced</td>
+</tr>
+<tr>
+<td>AverageCloudCoverRequested</td>
+<td>This provides a table representation for the average cloud cover that was requested by users when a job was requested.</td>
+</tr>
+<tr>
+<td>ImageRequestsTotal</td>
+<td>This specifies the total number of images that were requested for download over the selected time period.</td>
+</tr>
+<tr>
+<td>AverageSceneFileSize</td>
+<td>The baseline statistic to help Beachfront determine what resource requirements are needed to process a scene.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pcf-related_metrics">PCF-related Metrics<a class="headerlink" href="#pcf-related_metrics" title="Permanent link">&para;</a></h3>
+<p>Some of the requested metrics requested for Beachfront involve metrics that are available directly through Pivotal Cloud Foundry (PCF), which is the underlying architecture that Beachfront components run on. PCF provides these metrics which relays system resources and utilization for each instance of the Beachfront components running. For any current or future PCF-related metrics requirements, users can follow the steps below in order to find the system-related resources metrics.</p>
+<ol>
+<li>Log into the PCF web portal. Refer to the <a href="#relevant_urls">Relevant URL&rsquo;s</a> section for assistance, if necessary.</li>
+<li>The main screen should display the various environments that you have been granted access to. Hover over and click on the environment of interest (e.g. pz-int, pz-test, pz-prod).</li>
+<li>You should be navigated to the page for the specific environment selected, which lists all the apps running for that environment.</li>
+<li>Select the row with the application of interest, and then click on the “Name” column cell. This will navigate you to the page displaying the events and other information related to the application of interest.</li>
+<li>Locate the “Instances” section on the right side of the page, as shown in the image below.
+<img alt="Instances" src="../images/metrics/image5.png" title="Instances" /></li>
+<li>Click on the “View in PCF Metrics” link. A new browser window will open for PCF metrics.</li>
+<li>Login to PCF Metrics using the same credentials used for logging into PCF in step 1.</li>
+<li>The PCF Metrics page will display for the instance selected in step 4.
+<img alt="PCF_Metrics" src="../images/metrics/image8.png" title="PCF Metrics" /></li>
+<li>The dashboard displays several system-related metrics, such as latency, number of requests, cpu, disk, memory, and system events metrics, along with being able to look at logs for this instance.
+<img alt="PCF_Metrics_Dashboard" src="../images/metrics/image1.png" title="PCF Metrics Dashboard" /></li>
+</ol>
+<h3 id="environment_filtering_in_dashboards">Environment Filtering in Dashboards<a class="headerlink" href="#environment_filtering_in_dashboards" title="Permanent link">&para;</a></h3>
+<p>All environments provide the ability to look at all respective environments, as well as filtering to look at one specific environment. To add and remove filtering within the kibana dashboard, please follow the steps outlined below.</p>
+<h4 id="adding_environment_filter">Adding Environment Filter<a class="headerlink" href="#adding_environment_filter" title="Permanent link">&para;</a></h4>
+<p>To add an environment filter:</p>
+<ol>
+<li>Locate the “Beachfront_UniqueSpaces” component within the dashboard. It can be found in the upper-left corner of the dashboard, under the search bar and to the right of the menu bar.
+<img alt="EnvironmentSpaces" src="../images/metrics/image7.png" title="Environment Spaces" /></li>
+<li>If you hover the mouse/pointer over any of the sections within the pie chart, a pop-up will display which environment space it is, as well as particular counts for that environment.</li>
+<li>Once the environment space of interest is determined, press the mouse on that space to select it. A gray oval-shaped bubble should appear directly under the search bar, as shown below.
+<img alt="FilterApplied" src="../images/metrics/image3.png" title="Filter Applied" /></li>
+<li>The values in the dashboard should update shortly to reflect the filtered values.</li>
+</ol>
+<h4 id="removing_environment_filter">Removing Environment Filter<a class="headerlink" href="#removing_environment_filter" title="Permanent link">&para;</a></h4>
+<p>If an environment filter has been applied using the above instructions, to remove the filter:</p>
+<ol>
+<li>Locate the gray oval-shaped bubble under the search bar.
+<img alt="FilterApplied" src="../images/metrics/image3.png" title="Filter Applied" /></li>
+<li>Once found, hover over the gray bubble. Some icons should appear.
+<img alt="HoveringOverFilter" src="../images/metrics/image4.png" title="Hovering Over Filter" /></li>
+<li>Locate the trash can icon and select it. The gray bubble should disappear and the values in the dashboard should update shortly to reflect the unfiltered values.</li>
+</ol></div>
+        </div>
 
-				<h3 id="accessing_kibana">
-					Accessing Kibana<a class="headerlink"
-						href="#accessing_kibana" title="Permanent link">&para;</a>
-				</h3>
-				<p>To access kibana, users can follow the steps below:
-					<ol>
-						<li>Open a web browser on a computer or tablet/mobile device.</li>
-						<li>Navigate to the kibana URL of the environment interested in viewing.</li>
-						<li>A login screen will appear<div style="width:150px; font-size:80%; text-align:center; margin-bottom:15px;">
-								<img src="../images/metrics/image2.png" alt="Pivotal Login Screen" width="150px" height="auto" style="margin-bottom:0.5em;" />Pivotal Login Screen</div>
-						</li>
-						<li>Enter email/username and password for your user account, and select the ‘SIGN IN’ button. Once logged in with valid environment-specific credentials, you will be navigated to the kibana main page.</li>
-					</ol>
-				</p>
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '../..';</script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/require.js"></script>
+        <script src="../../search/search.js"></script>
 
-				<h3 id="kibana_overview">
-					Kibana Overview<a class="headerlink"
-						href="#kibana_overview" title="Permanent link">&para;</a>
-				</h3>
-				<p>Kibana has several components. At the core, users will mainly interact with kibana through 2-3 components: search (discover), visualizations, and dashboard.</p>
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&larr;</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&rarr;</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
 
-				<h3 id="overview_discover">
-					Discover<a class="headerlink"
-						href="#overview_discover" title="Permanent link">&para;</a>
-				</h3>
-				<p>The discover section allows for searching through the data. This provides the data in a more table-like format, for looking at specific records, as well as filtering to look at specific fields. For more details on the discover section, users can reference the Elastic <a target="_blank" href="https://www.elastic.co/guide/en/kibana/current/discover.html">website discovery details page</a>.</p>
 
-				<h3 id="overview_visualizations">
-					Visualizations<a class="headerlink"
-						href="#overview_visualizations" title="Permanent link">&para;</a>
-				</h3>
-				<p>The visualizations section allows data fields to be transformed into a more visual representation, rather than a table-like display. For more details on the discover section, users can reference the Elastic <a target="_blank" href="https://www.elastic.co/guide/en/kibana/current/visualizations.html">website visualizations details page</a>.</p>
-
-				<h3 id="overview_dashboards">
-					Dashboards<a class="headerlink"
-						href="#overview_dashboards" title="Permanent link">&para;</a>
-				</h3>
-				<p>The dashboards section allows saved visualizations and/or saved searches to be grouped and organized into common layouts. For more details on the discover section, users can reference the Elastic <a target="_blank" href="https://www.elastic.co/guide/en/kibana/current/dashboards.html">website dashboards details page</a>.</p>
-
-
-				<h2 id="accessing_metrics">
-					Accessing Beachfront Metrics<a class="headerlink" href="#accessing_metrics"
-						title="Permanent link">&para;</a>
-				</h2>
-				<p>Beachfront metrics dashboards can be accessed by following the steps below:</p>
-
-				<ol>
-					<li>Select the “Dashboard” section from within the kibana navigation panel on the left-hand side of the screen.
-						<img src="../images/metrics/image6.png" alt="Dashboard menu icon" width="150px" height="auto" style="margin-top:0.5em;" />
-					</li>
-					<li>This will open the main dashboards screen, with a table showing all saved dashboards.
-						<p>Beachfront currently has the following metrics dashboards available:
-							<ul>
-								<li><a href="#dashboard_user_metrics">Beachfront User Metrics</a> <span style="margin-left:15px;">Metrics related to users accessing Beachfront</span></li>
-								<li><a href="#dashboard_jobs_metrics">Beachfront Jobs Metrics</a> <span style="margin-left:15px;">Metrics related to jobs run on Beachfront, as well as any statistics related</span></li>
-							</ul>
-						</p>
-					</li>
-				</ol>
-
-				<caption>
-				NOTE:
-				<p>All environments provide the ability to look at all respective environments, as well as filtering to look at one specific environment. To learn about how to apply environment filtering, please reference the <a href="#environment_filtering_dashboards">Environment Filtering in Dashboards</a> section.</p>
-				</caption>
-
-				<h3 id="dashboard_user_metrics">
-					Beachfront User Metrics<a class="headerlink"
-						href="#dashboard_user_metrics" title="Permanent link">&para;</a>
-				</h3>
-				<p>The User metrics dashboard serves the purpose of displaying user-related metrics, such as who has used Beachfront (and how often or how recently), or which organizations, units, and countries are represented by those users. The image below displays an example of what the User metrics dashboard consists of.
-					<div style="font-size:80%; text-align:center; margin-top:0; margin-bottom:15px;">
-						<img src="../images/metrics/image9.png" alt="User Metrics Dashboard" style="margin:10px;"/>Beachfront User Metrics Dashboard</div>
-				</p>
-				<p>
-					The user metrics dashboard is organized with the following components:
-					<table>
-						<thead>
-							<tr>
-								<th>Dashboard Component</th>
-								<th>Description / Purpose</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>UniqueSpaces</td>
-								<td>The different spaces within the environment, with a pie chart breakdown of the percentage of events from each, over the selected time period. To look at just the events for a specific space (i.e. int, test, prod, etc), click on that part of the pie chart.</td>
-							</tr>
-							<tr>
-								<td>UserMostRecentLogins</td>
-								<td>This provides a list of the users (certificate distinguished names) who have logged into Beachfront, along with a count of the number of times they logged in, and the most recent date/time they logged in, over the selected time period.</td>
-							</tr>
-							<tr>
-								<td>TotalUniqueUserLogins</td>
-								<td>Provides a numerical count representation for the number of unique users that have used Beachfront over the selected time period.</td>
-							</tr>
-							<tr>
-								<td>AuthLoginStatus</td>
-								<td>Provides a breakdown of the successful and failed login attempts within Beachfront over the selected time period. </td>
-							</tr>
-							<tr>
-								<td>UniqueCountryCounts</td>
-								<td>This provides a breakdown of the unique countries represented by the users that have used Beachfront over the selected time period.</td>
-							</tr>
-							<tr>
-								<td>OrgUnitCounts</td>
-								<td>This provides a breakdown of the unique organizational units represented by the users that have used Beachfront over the selected time period. This provides a breakdown for any entities within the respective organization that the user is a part of (i.e. NGA, DoD, etc).</td>
-							</tr>
-							<tr>
-								<td>OrganizationCounts</td>
-								<td>This provides a breakdown of the unique organizations represented by the users that have used Beachfront over the selected time period.</td>
-							</tr>
-							<tr>
-								<td>NewExistingUserLoginsCount</td>
-								<td>Provides a side-by-side comparison of the number of existing users, compared to the number of first-time users within Beachfront over the selected time period.</td>
-							</tr>
-						</tbody>
-					</table>
-				</p>
-
-				<h3 id="dashboard_jobs_metrics">
-					Beachfront Jobs Metrics<a class="headerlink"
-						href="#dashboard_user_metrics" title="Permanent link">&para;</a>
-				</h3>
-				<p>The Jobs metrics dashboard serves the purpose of displaying job and system related information about Beachfront over the selected time period. The image below displays an example of what the Jobs metrics dashboard consists of.
-					<div style="font-size:80%; text-align:center; margin-top:0; margin-bottom:15px;">
-						<img src="../images/metrics/image10.png" alt="Jobs Metrics Dashboard" style="margin:10px;"/>Beachfront Jobs Metrics Dashboard</div>
-				</p>
-				<p>
-					The jobs metrics dashboard displays the following components:
-					<table>
-						<thead>
-							<tr>
-								<th>Dashboard Component</th>
-								<th>Description / Purpose</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>UniqueSpaces</td>
-								<td>The different spaces within the environment, with a pie chart breakdown of the percentage of events from each, over the selected time period. To look at just the events for a specific space (i.e. int, test, prod, etc), click on that part of the pie chart.</td>
-							</tr>
-							<tr>
-								<td>JobRequestsCount</td>
-								<td>This specifies the total number of jobs which have been requested over the specified time period. It is important to note that this number is explicitly for the number of jobs requested, not finished.</td>
-							</tr>
-							<tr>
-								<td>JobsCount</td>
-								<td>This provides a side-by-side breakdown for the number of jobs which have completed successfully compared to those which have resulted in an error.</td>
-							</tr>
-							<tr>
-								<td>ItemTypesRequested</td>
-								<td>This provides a table representation for the various imagery item types which were requested by users when a job was requested.</td>
-							</tr>
-							<tr>
-								<td>AreasOfInterestRequested</td>
-								<td>This provides a table representation for the various areas of interest (AOI) which were requested by users when a job was requested.</td>
-							</tr>
-							<tr>
-								<td>AverageJobCompletionTime</td>
-								<td>This specifies the average amount time (in minutes) it took jobs to complete processing.</td>
-							</tr>
-							<tr>
-								<td>AverageJobActivationTime</td>
-								<td>This specifies the average amount time (in seconds) it took jobs to complete activation.</td>
-							</tr>
-							<tr>
-								<td>CompletedJobsStatus</td>
-								<td>This provides the status for each job and how it completed after being run. It also lists the amount of time it took for the job to run.</td>
-							</tr>
-							<tr>
-								<td>UptimeDowntime</td>
-								<td>This provides a graph outlining when the system was up or down, over the specified time period. When certain times show a count of 0, that represents a time-period when the system was not available.</td>
-							</tr>
-							<tr>
-								<td>AverageSceneSizeGeographicArea</td>
-								<td>This is used to help determine performance and how much information we are processing in a certain period of time</td>
-							</tr>
-							<tr>
-								<td>AverageGeoJSONSize</td>
-								<td>This metric will help us understand how much data is being stored for each coastline produced</td>
-							</tr>
-							<tr>
-								<td>AverageCloudCoverRequested</td>
-								<td>This provides a table representation for the average cloud cover that was requested by users when a job was requested.</td>
-							</tr>
-							<tr>
-								<td>ImageRequestsTotal</td>
-								<td>This specifies the total number of images that were requested for download over the selected time period.</td>
-							</tr>
-							<tr>
-								<td>AverageSceneFileSize</td>
-								<td>The baseline statistic to help Beachfront determine what resource requirements are needed to process a scene.</td>
-							</tr>
-						</tbody>
-					</table>
-				</p>
-
-				<h3 id="pcf_metrics">
-					PCF-related Metrics<a class="headerlink"
-						href="#pcf_metrics" title="Permanent link">&para;</a>
-				</h3>
-				<p>
-					Some of the requested metrics requested for Beachfront involve metrics that are available directly through Pivotal Cloud Foundry (PCF), which is the underlying architecture that Beachfront components run on. PCF provides these metrics which relays system resources and utilization for each instance of the Beachfront components running. For any current or future PCF-related metrics requirements, users can follow the steps below in order to find the system-related resources metrics.
-					<ol>
-						<li id="pcf_metrics_step1">Log into the PCF web portal. Refer to the <a href="#relevant_urls">Relevant URL's</a> section for assistance, if necessary.</li>
-						<li>The main screen should display the various environments that you have been granted access to. Hover over and click on the environment of interest (e.g. pz-int, pz-test, pz-prod).</li>
-						<li>You should be navigated to the page for the specific environment selected, which lists all the apps running for that environment. </li>
-						<li>Select the row with the application of interest, and then click on the “Name” column cell. This will navigate you to the page displaying the events and other information related to the application of interest.</li>
-						<li>Locate the “Instances” section on the right side of the page, as shown in the image below.
-							<div style="font-size:80%; text-align:center; margin-top:0; margin-bottom:15px;">
-								<img src="../images/metrics/image5.png" alt="Instances" style="margin:10px;"/>Instances</div>
-						</li>
-						<li>Click on the “View in PCF Metrics” link. A new browser window will open for PCF metrics.</li>
-						<li>Login to PCF Metrics using the same credentials used for logging into PCF in <a href="#pcf_metrics_step1">step 1</a>.</li>
-						<li>The PCF Metrics page will display for the instance selected in <a href="#pcf_metrics_step4">step 4</a>.
-							<div style="font-size:80%; text-align:center; margin-top:0; margin-bottom:15px;">
-								<img src="../images/metrics/image8.png" alt="PCF Metrics" style="margin:10px;"/>PCF Metrics</div>
-						</li>
-						<li>The dashboard displays several system-related metrics, such as latency, number of requests, cpu, disk, memory, and system events metrics, along with being able to look at logs for this instance.
-							<div style="font-size:80%; text-align:center; margin-top:0; margin-bottom:15px;">
-								<img src="../images/metrics/image1.png" alt="PCF Metrics" style="margin:10px;"/>PCF Metrics Dashboard</div>
-						</li>
-					</ol>
-				</p>
-
-				<h3 id="environment_filtering_dashboards">
-					Environment Filtering in Dashboards<a class="headerlink"
-						href="#environment_filtering_dashboards" title="Permanent link">&para;</a>
-				</h3>
-				<p>All environments provide the ability to look at all respective environments, as well as filtering to look at one specific environment. To add and remove filtering within the kibana dashboard, please follow the steps outlined below.</p>
-
-				<h4 id="adding_environment_filter">
-					Adding Environment Filter<a class="headerlink"
-						href="#adding_environment_filter" title="Permanent link">&para;</a>
-				</h4>
-				<p>To add an environment filter:
-					<ol>
-						<li>Locate the “Beachfront_UniqueSpaces” component within the dashboard. It can be found in the upper-left corner of the dashboard, under the search bar and to the right of the menu bar.
-							<div style="width:200px; font-size:80%; text-align:center; margin-top:0; margin-bottom:15px;">
-								<img src="../images/metrics/image7.png" alt="Environment Spaces" style="margin:10px;"/>Environment Spaces</div>
-						</li>
-						<li>If you hover the mouse/pointer over any of the sections within the pie chart, a pop-up will display which environment space it is, as well as particular counts for that environment.</li>
-						<li>Once the environment space of interest is determined, press the mouse on that space to select it. A gray oval-shaped bubble should appear directly under the search bar, as shown below.
-							<div style="width:200px; font-size:80%; text-align:center; margin-top:0; margin-bottom:15px;">
-								<img src="../images/metrics/image3.png" alt="Filter Applied" style="margin:10px;"/>Filter Applied</div>
-						</li>
-						<li>The values in the dashboard should update shortly to reflect the filtered values.</li>
-					</ol>
-				</p>
-
-				<h4 id="removing_environment_filter">
-					Removing Environment Filter<a class="headerlink"
-						href="#removing_environment_filter" title="Permanent link">&para;</a>
-				</h4>
-				<p>If an environment filter has been applied using the above instructions, to remove the filter:
-					<ol>
-						<li>Locate the gray oval-shaped bubble under the search bar.
-							<div style="width:200px; font-size:80%; text-align:center; margin-top:0; margin-bottom:15px;">
-								<img src="../images/metrics/image3.png" alt="Existing Filter" style="margin:10px;"/>Existing Filter</div>
-						</li>
-						<li>Once found, hover over the gray bubble. Some icons should appear.
-							<div style="width:200px; font-size:80%; text-align:center; margin-top:0; margin-bottom:15px;">
-								<img src="../images/metrics/image4.png" alt="Hovering Over Filter" style="margin:10px;"/>Hovering Over Filter</div>
-						</li>
-						<li>Locate the trash can icon and select it. The gray bubble should disappear and the values in the dashboard should update shortly to reflect the unfiltered values.</li>
-					</ol>
-				</p>
-			</div>
-		</div>
-
-		<footer class="col-md-12">
-			<hr>
-			<p>
-				Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.
-			</p>
-		</footer>
-		<script>
-			var base_url = '../..';
-		</script>
-		<script src="../../js/base.js"></script>
-		<script src="../../search/require.js"></script>
-		<script src="../../search/search.js"></script>
-
-		<div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog"
-			aria-labelledby="Search Modal" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">
-							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-						</button>
-						<h4 class="modal-title" id="exampleModalLabel">Search</h4>
-					</div>
-					<div class="modal-body">
-						<p>From here you can search these documents. Enter your search
-							terms below.</p>
-						<form role="form">
-							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Search..."
-									id="mkdocs-search-query">
-							</div>
-						</form>
-						<div id="mkdocs-search-results"></div>
-					</div>
-					<div class="modal-footer"></div>
-				</div>
-			</div>
-		</div>
-		<div class="modal" id="mkdocs_keyboard_modal" tabindex="-1"
-			role="dialog" aria-labelledby="Keyboard Shortcuts Modal"
-			aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">
-							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-						</button>
-						<h4 class="modal-title" id="exampleModalLabel">Keyboard
-							Shortcuts</h4>
-					</div>
-					<div class="modal-body">
-						<table class="table">
-							<thead>
-								<tr>
-									<th style="width: 20%;">Keys</th>
-									<th>Action</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><kbd>?</kbd></td>
-									<td>Open this help</td>
-								</tr>
-								<tr>
-									<td><kbd>&larr;</kbd></td>
-									<td>Previous page</td>
-								</tr>
-								<tr>
-									<td><kbd>&rarr;</kbd></td>
-									<td>Next page</td>
-								</tr>
-								<tr>
-									<td><kbd>s</kbd></td>
-									<td>Search</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="modal-footer"></div>
-				</div>
-			</div>
-		</div>
-	</body>
+    </body>
 </html>
