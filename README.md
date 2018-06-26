@@ -1,5 +1,3 @@
-![Beachfront](docs/userguide/images/logo_inverted.png)
-
 # bf-docs
 
 This repository contains the markdown source for Beachfront documentation.
