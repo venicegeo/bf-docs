@@ -1,578 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Version 2 - Beachfront</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
 
-		<link rel="shortcut icon" href="../../img/favicon.ico">
-		<title>Version 2 Release Notes - Beachfront</title>
-		<link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-		<link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
-		<link href="../../css/base.css" rel="stylesheet">
-		<link rel="stylesheet" href="../../css/highlight.css">
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-		            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-		        <![endif]-->
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script> 
+    </head>
 
-		<script src="../../js/jquery-1.10.2.min.js"></script>
-		<script src="../../js/bootstrap-3.0.3.min.js"></script>
-		<script src="../../js/highlight.pack.js"></script>
-	</head>
+    <body>
 
-<body>
-	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="container">
-			<!-- Collapsed navigation -->
-			<div class="navbar-header">
-				<!-- Expander button -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="../..">Beachfront</a>
-			</div>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
 
-			<!-- Expanded navigation -->
-			<div class="navbar-collapse collapse">
-				<!-- Main navigation -->
-				<ul class="nav navbar-nav">
-					<li><a href="../..">Home</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown">User Guide <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="../../userguide/">Beachfront</a></li>
-							<li><a href="../../userguide/algorithms/">Algorithms</a></li>
-							<li><a href="../../userguide/tide-prediction/">Tide Prediction</a></li>
-							<li><a href="../../userguide/metrics/">Metrics</a></li>
-						</ul></li>
-					<li class="dropdown active"><a href="#"
-						class="dropdown-toggle" data-toggle="dropdown">Release Notes <b
-							class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li class="active"><a href="./">Version 2</a></li>
-						</ul></li>
-				</ul>
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">Beachfront</a>
+        </div>
 
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#" data-toggle="modal"
-						data-target="#mkdocs_search_modal"> <i class="fa fa-search"></i>
-							Search
-					</a></li>
-					<li><a rel="next" href="../../userguide/tide-prediction/">
-							<i class="fa fa-arrow-left"></i> Previous
-					</a></li>
-					<li class="disabled"><a rel="prev"> Next <i
-							class="fa fa-arrow-right"></i>
-					</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../userguide/">Beachfront</a>
+</li>
+                            
+<li >
+    <a href="../../userguide/algorithms/">Algorithms</a>
+</li>
+                            
+<li >
+    <a href="../../userguide/tide-prediction/">Tide Prediction</a>
+</li>
+                            
+<li >
+    <a href="../../userguide/metrics/">Metrics</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Release Notes <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li class="active">
+    <a href="./">Version 2</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
 
-	<div class="container">
-		<div class="col-md-3">
-			<div class="bs-sidebar hidden-print affix well" role="complementary">
-				<ul class="nav bs-sidenav">
-					<li class="main active"><a
-						href="#geoint_services_release_notes">GEOINT Services |
-							Release Notes</a></li>
-					<li><a href="#version_21">Version 2.1</a></li>
-					<li><a href="#version_20">Version 2.0</a></li>
-					<li><a href="#system_requirements">System Requirements:</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-md-9" role="main">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../../userguide/metrics/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-			<h1 id="geoint_services_release_notes">
-				GEOINT Services | Release Notes<a class="headerlink"
-					href="#geoint_services_release_notes" title="Permanent link">&para;</a>
-			</h1>
-			<hr />
-			<p>
-				<img src="../images/logo_inverted.png" alt="Beachfront Logo"
-					width="80%" style="margin-top: 0; margin-bottom: 0;" />
-			</p>
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#geoint_services_release_notes">GEOINT Services | Release Notes</a></li>
+            <li><a href="#version_21">Version 2.1</a></li>
+            <li><a href="#version_20">Version 2.0</a></li>
+            <li><a href="#system_requirements">System Requirements:</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
 
-			<h2 id="version_21">
-				Version 2.1<a class="headerlink" href="#version_21"
-					title="Permanent link">&para;</a>
-			</h2>
-			<p>Date and version number of current changes: TBD, v2.1</p>
-			<p>Beachfront 2.1 builds on Beachfront 2.0 and consists fixes to
-				enhance the user experience and to get Sentinel 2 data to correctly
-				produce and display coastline data.</p>
+<h1 id="geoint_services_release_notes">GEOINT Services | Release Notes<a class="headerlink" href="#geoint_services_release_notes" title="Permanent link">&para;</a></h1>
+<hr />
+<p><img src="../images/logo_inverted.png" alt="Beachfront Logo" width="80%" style="margin-top:0; margin-bottom:0;" /></p>
+<h2 id="version_21">Version 2.1<a class="headerlink" href="#version_21" title="Permanent link">&para;</a></h2>
+<p>Date and version number of current changes: TBD, v2.1</p>
+<p>Beachfront 2.1 builds on Beachfront 2.0 and consists fixes to enhance the 
+user experience and to get Sentinel 2 data to correctly produce and display 
+coastline data.</p>
+<p>The following additions and enhancements were made within the 2.1 release:</p>
+<p>Key Fixes:</p>
+<h4 id="beachfront_user_interface_fixes">Beachfront User Interface Fixes<a class="headerlink" href="#beachfront_user_interface_fixes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Added an Activation state to the Beachfront coastline detection process to mirror the Planet.com imagery retrieval process. Beachfront will now tell users exactly when their input dataset is awaiting Planet.com activation.</li>
+<li>All GeoServer Web Map Service (WMS) shoreline detection layers now are properly proxied through the Beachfront services component, instead of directing the user directly to GeoServer. This will help prevent many common Cross-Origin Resource Sharing (CORS) errors.</li>
+<li>Improved user functionality by adding an auto-scrolling feature to the Job Creation workflow. This helps users navigate selections throughout the coastline production process</li>
+<li>Enhanced error messages to guide the user to provide more search details when required</li>
+<li>Fixed minor styling issue to keep the style consistent across the entire application</li>
+<li>Fixed bug that caused style abnormalities when user tries to access an invalid url</li>
+<li>Fixed styling issues in the User Tour when user has low screen resolution</li>
+</ul>
+<h4 id="single_scene_coastline_detection_job_execution_with_sentinel_2_data_provided_by_planetcom">Single Scene Coastline Detection Job Execution with Sentinel 2 data provided by Planet.com<a class="headerlink" href="#single_scene_coastline_detection_job_execution_with_sentinel_2_data_provided_by_planetcom" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Users may now select Sentinel-2 in the search results dataset drop-down and run the detection process on Sentinel-2 imagery pulled from the Amazon Web Services hosted Sentinel-2 catalog.</li>
+</ul>
+<h4 id="algorithm_efficiency_improvements">Algorithm efficiency improvements<a class="headerlink" href="#algorithm_efficiency_improvements" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Improved various memory inefficiencies with the NDWI algorithm that previously caused algorithms to fail or take longer than needed to process.</li>
+<li>Updated algorithm software dependencies to latest approved versions to improve performance and resolve issues with old dependencies<ul>
+<li>Potrace 1.15</li>
+<li>Gippy 1.0</li>
+<li>GDAL 2.1.3</li>
+</ul>
+</li>
+</ul>
+<h4 id="beachfront_code_update_to_accommodate_image_activation_time_in_planetcom">Beachfront code update to accommodate image activation time in Planet.com<a class="headerlink" href="#beachfront_code_update_to_accommodate_image_activation_time_in_planetcom" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Allow a greater length of time for Planet.com image activation to take place. Previously, there was a very short timespan allocated to image activation, which sometimes caused failures in activation because the process took longer than expected.</li>
+</ul>
+<h4 id="coastline_dataset_metadata_fixes">Coastline Dataset Metadata Fixes<a class="headerlink" href="#coastline_dataset_metadata_fixes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Added all relevant metadata for coastline detections, such as creation date, tides information, algorithm and image types, to the detection results. This fixes a bug where previously certain metadata information was being excluded.</li>
+</ul>
+<h4 id="metrics_functionality">Metrics Functionality<a class="headerlink" href="#metrics_functionality" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Added several metrics capabilities to Beachfront within L2 &amp; L4 logsearch, including dashboards displaying user-related and jobs-related metrics</li>
+</ul>
+<h4 id="features_or_functionality_retired_in_beachfront_21">Features or functionality retired in Beachfront 2.1<a class="headerlink" href="#features_or_functionality_retired_in_beachfront_21" title="Permanent link">&para;</a></h4>
+<ul>
+<li>No capabilities were retired in Beachfront 2.1</li>
+</ul>
+<h4 id="improvements_from_previous_version">Improvements from previous version<a class="headerlink" href="#improvements_from_previous_version" title="Permanent link">&para;</a></h4>
+<ul>
+<li>See above</li>
+</ul>
+<hr />
+<h2 id="version_20">Version 2.0<a class="headerlink" href="#version_20" title="Permanent link">&para;</a></h2>
+<p>Date and version number of current changes: 01 May 2018, v2.0</p>
+<p>Beachfront 2.0 builds on Beachfront 1.0 and Piazza and starts to combine the
+two applications into one finding efficiencies.  These release notes contain
+the Beachfront 1.0 and Piazza MVP since those versions of the software were not
+ever officially delivered and granted ATO through NGA.  Beachfront 2.0 in UC
+will enable users to securely login using GEOAxIS, search-activated PlanetDAS
+provided imagery, execute coastline detection using an NDWI-based algorithm
+service, and download tide-coordinated vector outputs after detection job
+execution. Piazza capabilities have been absorbed into Beachfront and it will be
+ATO’d as one project, referred to as Beachfront_Piazza in this document going
+forward.</p>
+<p>The following additions and enhancements were made within the 2.0 release:</p>
+<h4 id="beachfront_user_interface">Beachfront User Interface:<a class="headerlink" href="#beachfront_user_interface" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Users will be able to interact with the Beachfront system through a
+    map-driven user interface at <a href="https://beachfront.gs.mil">https://beachfront.gs.mil</a></li>
+<li>OSM Basemap Tiles will be the basemap until more become available</li>
+</ul>
+<h4 id="geoaxis_user_authentication">GeoAxis User Authentication:<a class="headerlink" href="#geoaxis_user_authentication" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Users will be able to login using their GeoAxis credentials (PKI,
+    Disadvantaged User Account, Austere Account) through an OAuth2-enabled system</li>
+</ul>
+<h4 id="searching_planet_data_to_run_coastline_detection_on_through_planetdas">Searching Planet Data to run Coastline Detection on through PlanetDAS:<a class="headerlink" href="#searching_planet_data_to_run_coastline_detection_on_through_planetdas" title="Permanent link">&para;</a></h4>
+<ul>
+<li>User-controlled search of active AOIs and TOIs of RapidEye, PlanetScope, and
+    Copernicus Sentinel-2 imagery can be made using the following filters:<ul>
+<li>Spatial</li>
+<li>Temporal</li>
+<li>Cloud Cover</li>
+</ul>
+</li>
+<li>Users can choose between searching RapidEye, PlanetScope, or Sentinel-2
+    imagery for candidate scenes/tiles</li>
+</ul>
+<h4 id="scenetile_preview_of_planet_data_provided_by_planetdas">Scene/Tile Preview of Planet Data (provided by PlanetDAS):<a class="headerlink" href="#scenetile_preview_of_planet_data_provided_by_planetdas" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Enables users to visually inspect image scenes/tiles provided by Planet DAS,
+    e.g., Planet DAS tile server dependency, prior to detection job execution</li>
+<li>Enables user download to a local machine<ul>
+<li>Vector outputs will be in GeoJSON, GeoPackage, or Shapefile format
+    (user&rsquo;s choice)</li>
+</ul>
+</li>
+</ul>
+<h4 id="single_scene_coastline_detection_job_execution_register_and_execute_an_algorithm">Single Scene Coastline Detection Job Execution (Register and Execute an Algorithm):<a class="headerlink" href="#single_scene_coastline_detection_job_execution_register_and_execute_an_algorithm" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Users can execute coastline detection using a NDWI-based Python algorithm
+    combined with avectorization component in one detection service</li>
+<li>Beachfront fetches required Planet scene/tile analytic asset and stages for
+    processing</li>
+<li>Beachfront processes pixels with the algorithm and provides vector output
+    of a shoreline detection.</li>
+</ul>
+<h4 id="tide_prediction_service">Tide Prediction Service:<a class="headerlink" href="#tide_prediction_service" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Beachfront calls a Global Tide Prediction Service upon scene selection using
+    the centroid of the scene and time of collect in order to predict a tidal
+    height, using a 24-hour low and high value, and decorates every output
+    feature with this metadata</li>
+</ul>
+<h4 id="output_vector_data">Output Vector Data:<a class="headerlink" href="#output_vector_data" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Output vector metadata (at feature level) provides the following
+    attribution (and JSON types) relevant to the job it was created by:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>text</td>
+</tr>
+<tr>
+<td>job_id</td>
+<td>text</td>
+</tr>
+<tr>
+<td>algorithm_id</td>
+<td>text</td>
+</tr>
+<tr>
+<td>algorithm_name</td>
+<td>text</td>
+</tr>
+<tr>
+<td>algorithm_version</td>
+<td>text</td>
+</tr>
+<tr>
+<td>cloud_cover</td>
+<td>number</td>
+</tr>
+<tr>
+<td>created_by</td>
+<td>text</td>
+</tr>
+<tr>
+<td>created_on</td>
+<td>text (ISO-8601 date/time)</td>
+</tr>
+<tr>
+<td>name</td>
+<td>text</td>
+</tr>
+<tr>
+<td>resolution</td>
+<td>number</td>
+</tr>
+<tr>
+<td>scene_id</td>
+<td>text</td>
+</tr>
+<tr>
+<td>sensor_name</td>
+<td>text</td>
+</tr>
+<tr>
+<td>status</td>
+<td>text</td>
+</tr>
+<tr>
+<td>tide</td>
+<td>number</td>
+</tr>
+<tr>
+<td>tide_min_24h</td>
+<td>number</td>
+</tr>
+<tr>
+<td>tide_max_24h</td>
+<td>number</td>
+</tr>
+<tr>
+<td>time_of_collect</td>
+<td>text (ISO-8601 date/time)</td>
+</tr>
+<tr>
+<td>data_usage</td>
+<td>text</td>
+</tr>
+<tr>
+<td>classification</td>
+<td>text</td>
+</tr>
+</tbody>
+</table>
+<h4 id="jobs_list">Jobs List:<a class="headerlink" href="#jobs_list" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Jobs List provides user ability to return to view historical jobs and their
+    success/failure</li>
+</ul>
+<h4 id="performance_enhancements">Performance Enhancements:<a class="headerlink" href="#performance_enhancements" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Non-redundant processing and caching of detections, increasing
+    performance and efficiency</li>
+<li>API micro-service refactored to achieve better maintainability, reliability,
+    and configuration integration with the deployment environment</li>
+<li>Job executor service refactored for better horizontal scaling, increasing
+    concurrent user capacity by 3x</li>
+<li>Decreased processing time by 3x through various performance improvements</li>
+</ul>
+<h4 id="bug_fixes">Bug Fixes:<a class="headerlink" href="#bug_fixes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Significant amount of work went into geting the NDWI to correct output
+    coastline vectors onto the UI.</li>
+</ul>
+<h4 id="features_or_functionality_retired_in_beachfront_10">Features or functionality retired in Beachfront 1.0:<a class="headerlink" href="#features_or_functionality_retired_in_beachfront_10" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Piazza will no longer be refer to as a separate application.  By combining
+    the two applications, the architecture was simplified. This has resulted
+    in better maintainability and faster development.</li>
+</ul>
+<h4 id="improvements_from_previous_version_1">Improvements from previous version:<a class="headerlink" href="#improvements_from_previous_version_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>N/A</li>
+</ul>
+<h2 id="system_requirements">System Requirements:<a class="headerlink" href="#system_requirements" title="Permanent link">&para;</a></h2>
+<p>Data exported from Beachfront 1.x is viewable in Boundless Desktop/QGIS, ArcGIS 10.3 (and later versions) with the Data Interoperability Extension, and GEOINT Viewer as GeoJSON and GeoPackage file formats</p>
+<p>Browser requirements for the Beachfront web user interface:</p>
+<ul>
+<li><strong>Recommended:</strong> Chrome 55 and later</li>
+<li>Firefox 45 and later</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Additional Info</strong>
+For more information on the release, please use the Beachfront
+&ldquo;Ask the Expert&rdquo; channel.</p>
+</blockquote></div>
+        </div>
 
-			<p>The following additions and enhancements were made within the
-				2.1 release:</p>
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '../..';</script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/require.js"></script>
+        <script src="../../search/search.js"></script>
 
-			<b>Key Fixes:</b>
-			<h4 id="beachfront_user_interface_fixes_21">
-				Beachfront User Interface Fixes:<a class="headerlink"
-					href="#beachfront_user_interface_fixes_21" title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>Added an Activation state to the Beachfront coastline
-					detection process to mirror the Planet.com imagery retrieval
-					process. Beachfront will now tell users exactly when their input
-					dataset is awaiting Planet.com activation.</li>
-				<li>All GeoServer Web Map Service (WMS) shoreline detection
-					layers now are properly proxied through the Beachfront services
-					component, instead of directing the user directly to GeoServer.
-					This will help prevent many common Cross-Origin Resource Sharing
-					(CORS) errors.</li>
-				<li>Improved user functionality by adding an auto-scrolling
-					feature to the Job Creation workflow. This helps users navigate
-					selections throughout the coastline production process</li>
-				<li>Enhanced error messages to guide the user to provide more
-					search details when required</li>
-				<li>Fixed minor styling issue to keep the style consistent
-					across the entire application</li>
-				<li>Fixed bug that caused style abnormalities when user tries
-					to access an invalid url</li>
-				<li>Fixed styling issues in the User Tour when user has low
-					screen resolution</li>
-			</ul>
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&larr;</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&rarr;</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
 
-			<h4 id="single_scene_coastline_21">
-				Single Scene Coastline Detection Job Execution with Sentinel 2 data
-				provided by Planet.com:<a class="headerlink"
-					href="#single_scene_coastline_21" title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>Users may now select Sentinel-2 in the search results
-					dataset drop-down and run the detection process on Sentinel-2
-					imagery pulled from the Amazon Web Services hosted Sentinel-2
-					catalog.</li>
-			</ul>
-			<h4 id="algorithm_efficiency_improvements_21">
-				Algorithm efficiency improvements:<a class="headerlink"
-					href="#algorithm_efficiency_improvements_21" title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>Improved various memory inefficiencies with the NDWI
-					algorithm that previously caused algorithms to fail or take longer
-					than needed to process.</li>
-				<li>Updated algorithm software dependencies to latest approved
-					versions to improve performance and resolve issues with old
-					dependencies:
-					<ul>
-						<li>Potrace 1.15</li>
-						<li>Gippy 1.0</li>
-						<li>GDAL 2.1.3</li>
-					</ul>
-				</li>
-			</ul>
-			<h4 id="beachfront_code_updates_21">
-				Beachfront code update to accommodate image activation time in
-				Planet.com:<a class="headerlink" href="#beachfront_code_updates_21"
-					title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>Allow a greater length of time for Planet.com image
-					activation to take place. Previously, there was a very short
-					timespan allocated to image activation, which sometimes caused
-					failures in activation because the process took longer than
-					expected.</li>
-			</ul>
-			<h4 id="coastline_dataset_metadata_fixes_21">
-				Coastline Dataset Metadata Fixes:<a class="headerlink"
-					href="#coastline_dataset_metadata_fixes_21" title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>Added all relevant metadata for coastline detections, such
-					as creation date, tides information, algorithm and image types, to
-					the detection results. This fixes a bug where previously certain
-					metadata information was being excluded.</li>
-			</ul>
-			<h4 id="metrics_capabilities_21">
-				Metrics Functionality:<a class="headerlink"
-					href="#metrics_capabilities_21" title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>Added several metrics capabilities to Beachfront within L2
-					& L4 logsearch, including dashboards displaying user-related and
-					jobs-related metrics</li>
-			</ul>
-			<h4 id="features_or_functionality_retired_in_beachfront_21">
-				Features or functionality retired in Beachfront 2.1:<a
-					class="headerlink"
-					href="#features_or_functionality_retired_in_beachfront_21"
-					title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>No capabilities were retired in Beachfront 2.1</li>
-			</ul>
-			<h4 id="improvements_from_previous_version_21">
-				Improvements from previous version:<a class="headerlink"
-					href="#improvements_from_previous_version_21"
-					title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>See above</li>
-			</ul>
 
-			<hr />
-
-			<h2 id="version_20">
-				Version 2.0<a class="headerlink" href="#version_20"
-					title="Permanent link">&para;</a>
-			</h2>
-			<p>Date and version number of current changes: 01 May 2018, v2.0</p>
-			<p>Beachfront 2.0 builds on Beachfront 1.0 and Piazza and starts
-				to combine the two applications into one finding efficiencies. These
-				release notes contain the Beachfront 1.0 and Piazza MVP since those
-				versions of the software were not ever officially delivered and
-				granted ATO through NGA. Beachfront 2.0 in UC will enable users to
-				securely login using GEOAxIS, search-activated PlanetDAS provided
-				imagery, execute coastline detection using an NDWI-based algorithm
-				service, and download tide-coordinated vector outputs after
-				detection job execution. Piazza capabilities have been absorbed into
-				Beachfront and it will be ATO’d as one project, referred to as
-				Beachfront_Piazza in this document going forward.</p>
-			<p>The following additions and enhancements were made within the
-				2.0 release:</p>
-			<h4 id="beachfront_user_interface">
-				Beachfront User Interface:<a class="headerlink"
-					href="#beachfront_user_interface" title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>Users will be able to interact with the Beachfront system
-					through a map-driven user interface at <a
-					href="https://beachfront.gs.mil">https://beachfront.gs.mil</a>
-				</li>
-				<li>OSM Basemap Tiles will be the basemap until more become
-					available</li>
-			</ul>
-			<h4 id="geoaxis_user_authentication">
-				GeoAxis User Authentication:<a class="headerlink"
-					href="#geoaxis_user_authentication" title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>Users will be able to login using their GeoAxis credentials
-					(PKI, Disadvantaged User Account, Austere Account) through an
-					OAuth2-enabled system</li>
-			</ul>
-			<h4
-				id="searching_planet_data_to_run_coastline_detection_on_through_planetdas">
-				Searching Planet Data to run Coastline Detection on through
-				PlanetDAS:<a class="headerlink"
-					href="#searching_planet_data_to_run_coastline_detection_on_through_planetdas"
-					title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>User-controlled search of active AOIs and TOIs of RapidEye,
-					PlanetScope, and Copernicus Sentinel-2 imagery can be made using
-					the following filters:
-					<ul>
-						<li>Spatial</li>
-						<li>Temporal</li>
-						<li>Cloud Cover</li>
-					</ul>
-				</li>
-				<li>Users can choose between searching RapidEye, PlanetScope,
-					or Sentinel-2 imagery for candidate scenes/tiles</li>
-			</ul>
-			<h4 id="scenetile_preview_of_planet_data_provided_by_planetdas">
-				Scene/Tile Preview of Planet Data (provided by PlanetDAS):<a
-					class="headerlink"
-					href="#scenetile_preview_of_planet_data_provided_by_planetdas"
-					title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>Enables users to visually inspect image scenes/tiles
-					provided by Planet DAS, e.g., Planet DAS tile server dependency,
-					prior to detection job execution</li>
-				<li>Enables user download to a local machine
-					<ul>
-						<li>Vector outputs will be in GeoJSON, GeoPackage, or
-							Shapefile format (user&rsquo;s choice)</li>
-					</ul>
-				</li>
-			</ul>
-			<h4
-				id="single_scene_coastline_detection_job_execution_register_and_execute_an_algorithm">
-				Single Scene Coastline Detection Job Execution (Register and Execute
-				an Algorithm):<a class="headerlink"
-					href="#single_scene_coastline_detection_job_execution_register_and_execute_an_algorithm"
-					title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>Users can execute coastline detection using a NDWI-based
-					Python algorithm combined with avectorization component in one
-					detection service</li>
-				<li>Beachfront fetches required Planet scene/tile analytic
-					asset and stages for processing</li>
-				<li>Beachfront processes pixels with the algorithm and provides
-					vector output of a shoreline detection.</li>
-			</ul>
-			<h4 id="tide_prediction_service">
-				Tide Prediction Service:<a class="headerlink"
-					href="#tide_prediction_service" title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>Beachfront calls a Global Tide Prediction Service upon
-					scene selection using the centroid of the scene and time of collect
-					in order to predict a tidal height, using a 24-hour low and high
-					value, and decorates every output feature with this metadata</li>
-			</ul>
-			<h4 id="output_vector_data">
-				Output Vector Data:<a class="headerlink" href="#output_vector_data"
-					title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>Output vector metadata (at feature level) provides the
-					following attribution (and JSON types) relevant to the job it was
-					created by:</li>
-			</ul>
-			<table>
-				<thead>
-					<tr>
-						<th>Field</th>
-						<th>Type</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>id</td>
-						<td>text</td>
-					</tr>
-					<tr>
-						<td>job_id</td>
-						<td>text</td>
-					</tr>
-					<tr>
-						<td>algorithm_id</td>
-						<td>text</td>
-					</tr>
-					<tr>
-						<td>algorithm_name</td>
-						<td>text</td>
-					</tr>
-					<tr>
-						<td>algorithm_version</td>
-						<td>text</td>
-					</tr>
-					<tr>
-						<td>cloud_cover</td>
-						<td>number</td>
-					</tr>
-					<tr>
-						<td>created_by</td>
-						<td>text</td>
-					</tr>
-					<tr>
-						<td>created_on</td>
-						<td>text (ISO-8601 date/time)</td>
-					</tr>
-					<tr>
-						<td>name</td>
-						<td>text</td>
-					</tr>
-					<tr>
-						<td>resolution</td>
-						<td>number</td>
-					</tr>
-					<tr>
-						<td>scene_id</td>
-						<td>text</td>
-					</tr>
-					<tr>
-						<td>sensor_name</td>
-						<td>text</td>
-					</tr>
-					<tr>
-						<td>status</td>
-						<td>text</td>
-					</tr>
-					<tr>
-						<td>tide</td>
-						<td>number</td>
-					</tr>
-					<tr>
-						<td>tide_min_24h</td>
-						<td>number</td>
-					</tr>
-					<tr>
-						<td>tide_max_24h</td>
-						<td>number</td>
-					</tr>
-					<tr>
-						<td>time_of_collect</td>
-						<td>text (ISO-8601 date/time)</td>
-					</tr>
-					<tr>
-						<td>data_usage</td>
-						<td>text</td>
-					</tr>
-					<tr>
-						<td>classification</td>
-						<td>text</td>
-					</tr>
-				</tbody>
-			</table>
-			<h4 id="jobs_list">
-				Jobs List:<a class="headerlink" href="#jobs_list"
-					title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>Jobs List provides user ability to return to view
-					historical jobs and their success/failure</li>
-			</ul>
-			<h4 id="performance_enhancements">
-				Performance Enhancements:<a class="headerlink"
-					href="#performance_enhancements" title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>Non-redundant processing and caching of detections,
-					increasing performance and efficiency</li>
-				<li>API micro-service refactored to achieve better
-					maintainability, reliability, and configuration integration with
-					the deployment environment</li>
-				<li>Job executor service refactored for better horizontal
-					scaling, increasing concurrent user capacity by 3x</li>
-				<li>Decreased processing time by 3x through various performance
-					improvements</li>
-			</ul>
-			<h4 id="bug_fixes">
-				Bug Fixes:<a class="headerlink" href="#bug_fixes"
-					title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>Significant amount of work went into geting the NDWI to
-					correct output coastline vectors onto the UI.</li>
-			</ul>
-			<h4 id="features_or_functionality_retired_in_beachfront_10">
-				Features or functionality retired in Beachfront 1.0:<a
-					class="headerlink"
-					href="#features_or_functionality_retired_in_beachfront_10"
-					title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>Piazza will no longer be refer to as a separate
-					application. By combining the two applications, the architecture
-					was simplified. This has resulted in better maintainability and
-					faster development.</li>
-			</ul>
-			<h4 id="improvements_from_previous_version">
-				Improvements from previous version:<a class="headerlink"
-					href="#improvements_from_previous_version" title="Permanent link">&para;</a>
-			</h4>
-			<ul>
-				<li>N/A</li>
-			</ul>
-
-			<hr />
-
-			<h2 id="system_requirements">
-				System Requirements:<a class="headerlink"
-					href="#system_requirements" title="Permanent link">&para;</a>
-			</h2>
-			<p>Data exported from Beachfront 1.x is viewable in Boundless
-				Desktop/QGIS, ArcGIS 10.3 (and later versions) with the Data
-				Interoperability Extension, and GEOINT Viewer as GeoJSON and
-				GeoPackage file formats</p>
-			<p>Browser requirements for the Beachfront web user interface:</p>
-			<ul>
-				<li><strong>Recommended:</strong> Chrome 55 and later</li>
-				<li>Firefox 45 and later</li>
-			</ul>
-			<hr />
-			<blockquote>
-				<p>
-					<strong>Additional Info</strong> For more information on the
-					release, please use the Beachfront &ldquo;Ask the Expert&rdquo;
-					channel.
-				</p>
-			</blockquote>
-		</div>
-	</div>
-
-	<footer class="col-md-12">
-		<hr>
-		<p>
-			Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.
-		</p>
-	</footer>
-	<script>var base_url = '../..';</script>
-	<script src="../../js/base.js"></script>
-	<script src="../../search/require.js"></script>
-	<script src="../../search/search.js"></script>
-
-	<div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog"
-		aria-labelledby="Search Modal" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-					</button>
-					<h4 class="modal-title" id="exampleModalLabel">Search</h4>
-				</div>
-				<div class="modal-body">
-					<p>From here you can search these documents. Enter your search
-						terms below.</p>
-					<form role="form">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Search..."
-								id="mkdocs-search-query">
-						</div>
-					</form>
-					<div id="mkdocs-search-results"></div>
-				</div>
-				<div class="modal-footer"></div>
-			</div>
-		</div>
-	</div>
-	<div class="modal" id="mkdocs_keyboard_modal" tabindex="-1"
-		role="dialog" aria-labelledby="Keyboard Shortcuts Modal"
-		aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-					</button>
-					<h4 class="modal-title" id="exampleModalLabel">Keyboard
-						Shortcuts</h4>
-				</div>
-				<div class="modal-body">
-					<table class="table">
-						<thead>
-							<tr>
-								<th style="width: 20%;">Keys</th>
-								<th>Action</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><kbd>?</kbd></td>
-								<td>Open this help</td>
-							</tr>
-							<tr>
-								<td><kbd>&larr;</kbd></td>
-								<td>Previous page</td>
-							</tr>
-							<tr>
-								<td><kbd>&rarr;</kbd></td>
-								<td>Next page</td>
-							</tr>
-							<tr>
-								<td><kbd>s</kbd></td>
-								<td>Search</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="modal-footer"></div>
-			</div>
-		</div>
-	</div>
-</body>
+    </body>
 </html>
