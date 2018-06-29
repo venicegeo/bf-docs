@@ -3,6 +3,54 @@
 
 <img src="../images/logo_inverted.png" alt="Beachfront Logo" width="80%" style="margin-top:0; margin-bottom:0;" />
 
+## Version 2.1
+
+Date and version number of current changes: TBD, v2.1
+
+Beachfront 2.1 builds on Beachfront 2.0 and consists fixes to enhance the 
+user experience and to get Sentinel 2 data to correctly produce and display 
+coastline data.
+
+The following additions and enhancements were made within the 2.1 release:
+
+Key Fixes:
+
+#### Beachfront User Interface Fixes
+* Added an Activation state to the Beachfront coastline detection process to mirror the Planet.com imagery retrieval process. Beachfront will now tell users exactly when their input dataset is awaiting Planet.com activation.
+* All GeoServer Web Map Service (WMS) shoreline detection layers now are properly proxied through the Beachfront services component, instead of directing the user directly to GeoServer. This will help prevent many common Cross-Origin Resource Sharing (CORS) errors.
+* Improved user functionality by adding an auto-scrolling feature to the Job Creation workflow. This helps users navigate selections throughout the coastline production process
+* Enhanced error messages to guide the user to provide more search details when required
+* Fixed minor styling issue to keep the style consistent across the entire application
+* Fixed bug that caused style abnormalities when user tries to access an invalid url
+* Fixed styling issues in the User Tour when user has low screen resolution
+
+#### Single Scene Coastline Detection Job Execution with Sentinel 2 data provided by Planet.com
+* Users may now select Sentinel-2 in the search results dataset drop-down and run the detection process on Sentinel-2 imagery pulled from the Amazon Web Services hosted Sentinel-2 catalog.
+
+#### Algorithm efficiency improvements
+* Improved various memory inefficiencies with the NDWI algorithm that previously caused algorithms to fail or take longer than needed to process.
+* Updated algorithm software dependencies to latest approved versions to improve performance and resolve issues with old dependencies
+     * Potrace 1.15
+     * Gippy 1.0
+     * GDAL 2.1.3
+
+#### Beachfront code update to accommodate image activation time in Planet.com     
+ * Allow a greater length of time for Planet.com image activation to take place. Previously, there was a very short timespan allocated to image activation, which sometimes caused failures in activation because the process took longer than expected.
+ 
+#### Coastline Dataset Metadata Fixes
+ * Added all relevant metadata for coastline detections, such as creation date, tides information, algorithm and image types, to the detection results. This fixes a bug where previously certain metadata information was being excluded.
+
+#### Metrics Functionality
+ * Added several metrics capabilities to Beachfront within L2 & L4 logsearch, including dashboards displaying user-related and jobs-related metrics
+
+#### Features or functionality retired in Beachfront 2.1
+ * No capabilities were retired in Beachfront 2.1
+
+#### Improvements from previous version
+ * See above
+ 
+------
+
 ## Version 2.0
 
 Date and version number of current changes: 01 May 2018, v2.0
