@@ -12,5 +12,6 @@ pages:
   - Algorithms: userguide/algorithms.md
   - Tide Prediction: userguide/tide-prediction.md
   - Metrics: userguide/metrics.md
+  - Data: userguide/data.md
 - Release Notes:
   - Version 2: release_notes/Version2.md

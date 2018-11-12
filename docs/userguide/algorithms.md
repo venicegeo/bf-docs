@@ -108,5 +108,5 @@ band that has a very low water reflectance. The following bands are recommended.
 |---------------|---------------|-------------|
 | Landsat8      | 1 (Coastal)   | 5 (NIR)     |
 | RapidEye      | 2 (Green)     | 4 (NIR)     |
-| PlanetSceope  | 2 (Green)     | 4 (NIR)     |
+| PlanetScope   | 2 (Green)     | 4 (NIR)     |
 | Sentinel-2    | 2 (Blue)      | 8 (NIR)     |

@@ -13,9 +13,6 @@ Although intended for shorelines, Beachfront can be modified to serve other
 feature communities of interest to assist in automated feature and object
 detection if other algorithms are available.
 
-> **Disclaimer:** NGA leveraged the VeniceGeo open-source project to develop
-> Beachfront and enabled it for use by the geospatial enterprise.
-
 ## Benefits of Beachfront
 
 Previous shoreline extraction efforts used massive, infrequent efforts to digitize
@@ -29,7 +26,6 @@ demand.
     obtain large shapefiles and search through large outdated files. Users can
     update coastline vector data as often as new source data is available.
 -   Its auto-extraction feature exports immediately to ArcMap or QGIS for editing.
--   The app shows distinctions between high tide, muddy areas, and more.
 
 The result is that users have more time to conduct analysis on other tasks.
 
