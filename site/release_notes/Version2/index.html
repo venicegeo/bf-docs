@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Version 2.0 - Beachfront</title>
+        <title>Version 2 - Beachfront</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -63,6 +63,14 @@
 <li >
     <a href="../../userguide/tide-prediction/">Tide Prediction</a>
 </li>
+                            
+<li >
+    <a href="../../userguide/metrics/">Metrics</a>
+</li>
+                            
+<li >
+    <a href="../../userguide/data/">Data</a>
+</li>
                         </ul>
                     </li>
                     <li class="dropdown active">
@@ -70,7 +78,7 @@
                         <ul class="dropdown-menu">
                             
 <li class="active">
-    <a href="./">Version 2.0</a>
+    <a href="./">Version 2</a>
 </li>
                         </ul>
                     </li>
@@ -83,7 +91,7 @@
                     </a>
                 </li>
                     <li >
-                        <a rel="next" href="../../userguide/tide-prediction/">
+                        <a rel="next" href="../../userguide/data/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
@@ -101,6 +109,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#geoint_services_release_notes">GEOINT Services | Release Notes</a></li>
+            <li><a href="#version_21">Version 2.1</a></li>
             <li><a href="#version_20">Version 2.0</a></li>
             <li><a href="#system_requirements">System Requirements:</a></li>
     </ul>
@@ -110,6 +119,58 @@
 <h1 id="geoint_services_release_notes">GEOINT Services | Release Notes<a class="headerlink" href="#geoint_services_release_notes" title="Permanent link">&para;</a></h1>
 <hr />
 <p><img src="../images/logo_inverted.png" alt="Beachfront Logo" width="80%" style="margin-top:0; margin-bottom:0;" /></p>
+<h2 id="version_21">Version 2.1<a class="headerlink" href="#version_21" title="Permanent link">&para;</a></h2>
+<p>Date and version number of current changes: TBD, v2.1</p>
+<p>Beachfront 2.1 builds on Beachfront 2.0 and consists fixes to enhance the 
+user experience and to get Sentinel 2 data to correctly produce and display 
+coastline data.</p>
+<p>The following additions and enhancements were made within the 2.1 release:</p>
+<p>Key Fixes:</p>
+<h4 id="beachfront_user_interface_fixes">Beachfront User Interface Fixes<a class="headerlink" href="#beachfront_user_interface_fixes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Added an Activation state to the Beachfront coastline detection process to mirror the Planet.com imagery retrieval process. Beachfront will now tell users exactly when their input dataset is awaiting Planet.com activation.</li>
+<li>All GeoServer Web Map Service (WMS) shoreline detection layers now are properly proxied through the Beachfront services component, instead of directing the user directly to GeoServer. This will help prevent many common Cross-Origin Resource Sharing (CORS) errors.</li>
+<li>Improved user functionality by adding an auto-scrolling feature to the Job Creation workflow. This helps users navigate selections throughout the coastline production process</li>
+<li>Enhanced error messages to guide the user to provide more search details when required</li>
+<li>Fixed minor styling issue to keep the style consistent across the entire application</li>
+<li>Fixed bug that caused style abnormalities when user tries to access an invalid url</li>
+<li>Fixed styling issues in the User Tour when user has low screen resolution</li>
+</ul>
+<h4 id="single_scene_coastline_detection_job_execution_with_sentinel_2_data_provided_by_planetcom">Single Scene Coastline Detection Job Execution with Sentinel 2 data provided by Planet.com<a class="headerlink" href="#single_scene_coastline_detection_job_execution_with_sentinel_2_data_provided_by_planetcom" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Users may now select Sentinel-2 in the search results dataset drop-down and run the detection process on Sentinel-2 imagery pulled from the Amazon Web Services hosted Sentinel-2 catalog.</li>
+</ul>
+<h4 id="algorithm_efficiency_improvements">Algorithm efficiency improvements<a class="headerlink" href="#algorithm_efficiency_improvements" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Improved various memory inefficiencies with the NDWI algorithm that previously caused algorithms to fail or take longer than needed to process.</li>
+<li>Updated algorithm software dependencies to latest approved versions to improve performance and resolve issues with old dependencies<ul>
+<li>Potrace 1.15</li>
+<li>Gippy 1.0</li>
+<li>GDAL 2.1.3</li>
+</ul>
+</li>
+</ul>
+<h4 id="beachfront_code_update_to_accommodate_image_activation_time_in_planetcom">Beachfront code update to accommodate image activation time in Planet.com<a class="headerlink" href="#beachfront_code_update_to_accommodate_image_activation_time_in_planetcom" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Allow a greater length of time for Planet.com image activation to take place. Previously, there was a very short timespan allocated to image activation, which sometimes caused failures in activation because the process took longer than expected.</li>
+</ul>
+<h4 id="coastline_dataset_metadata_fixes">Coastline Dataset Metadata Fixes<a class="headerlink" href="#coastline_dataset_metadata_fixes" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Added all relevant metadata for coastline detections, such as creation date, tides information, algorithm and image types, to the detection results. This fixes a bug where previously certain metadata information was being excluded.</li>
+</ul>
+<h4 id="metrics_functionality">Metrics Functionality<a class="headerlink" href="#metrics_functionality" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Added several metrics capabilities to Beachfront within L2 &amp; L4 logsearch, including dashboards displaying user-related and jobs-related metrics</li>
+</ul>
+<h4 id="features_or_functionality_retired_in_beachfront_21">Features or functionality retired in Beachfront 2.1<a class="headerlink" href="#features_or_functionality_retired_in_beachfront_21" title="Permanent link">&para;</a></h4>
+<ul>
+<li>No capabilities were retired in Beachfront 2.1</li>
+</ul>
+<h4 id="improvements_from_previous_version">Improvements from previous version<a class="headerlink" href="#improvements_from_previous_version" title="Permanent link">&para;</a></h4>
+<ul>
+<li>See above</li>
+</ul>
+<hr />
 <h2 id="version_20">Version 2.0<a class="headerlink" href="#version_20" title="Permanent link">&para;</a></h2>
 <p>Date and version number of current changes: 01 May 2018, v2.0</p>
 <p>Beachfront 2.0 builds on Beachfront 1.0 and Piazza and starts to combine the
@@ -289,7 +350,7 @@ forward.</p>
     the two applications, the architecture was simplified. This has resulted
     in better maintainability and faster development.</li>
 </ul>
-<h4 id="improvements_from_previous_version">Improvements from previous version:<a class="headerlink" href="#improvements_from_previous_version" title="Permanent link">&para;</a></h4>
+<h4 id="improvements_from_previous_version_1">Improvements from previous version:<a class="headerlink" href="#improvements_from_previous_version_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li>N/A</li>
 </ul>
