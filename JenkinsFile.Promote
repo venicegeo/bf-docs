@@ -103,7 +103,7 @@ node {
         [$class: 'StringBinding', credentialsId: "${env.PZ_PASSPHRASE}", variable: "PZ_PASSPHRASE"]
       ]) {
         // Push the app
-        sh "cf push ${appName} -f manifest.jenkins.yml --hostname ${appName} -d ${env.PROMOTE_DOMAIN} --no-start --no-route"
+        sh "cf push ${appName} -f manifest.jenkins.yml --hostname ${appName} -d ${env.PROMOTE_DOMAIN} --no-start"
         try {
           sh """
             cf set-env ${appName} SPACE ${env.PROMOTE_SPACE}
@@ -136,7 +136,7 @@ node {
       }
 
       // Assign Routes
-      def legacyAppNames = sh(script: "cf routes | grep \"${appBaseName}\" | awk '{print \$4}'", returnStdout: true)
+      def legacyAppNames = sh(script: "cf routes | grep \"${appBaseName} \" | awk '{print \$4}'", returnStdout: true)
       sh "cf map-route ${appName} ${env.PROMOTE_DOMAIN} --hostname ${appBaseName}"
 
       // Delete old Routes
