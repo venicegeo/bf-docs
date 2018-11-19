@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Algorithms - Beachfront</title>
+        <title>Data - Beachfront</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -56,8 +56,8 @@
     <a href="../">Beachfront</a>
 </li>
                             
-<li class="active">
-    <a href="./">Algorithms</a>
+<li >
+    <a href="../algorithms/">Algorithms</a>
 </li>
                             
 <li >
@@ -68,8 +68,8 @@
     <a href="../metrics/">Metrics</a>
 </li>
                             
-<li >
-    <a href="../data/">Data</a>
+<li class="active">
+    <a href="./">Data</a>
 </li>
                         </ul>
                     </li>
@@ -91,12 +91,12 @@
                     </a>
                 </li>
                     <li >
-                        <a rel="next" href="../">
+                        <a rel="next" href="../metrics/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../tide-prediction/">
+                        <a rel="prev" href="../../release_notes/Version2/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -108,131 +108,122 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#algorithms">Algorithms</a></li>
-            <li><a href="#ndwi">NDWI</a></li>
+        <li class="main active"><a href="#data">Data</a></li>
+            <li><a href="#description">Description</a></li>
+            <li><a href="#data_dictionary">Data Dictionary</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="algorithms">Algorithms<a class="headerlink" href="#algorithms" title="Permanent link">&para;</a></h1>
-<h2 id="ndwi">NDWI<a class="headerlink" href="#ndwi" title="Permanent link">&para;</a></h2>
-<p>While bfalg-ndwi can be used as a Python library (as from the Beachfront web app),
-it can also be run using the Command Line Interface (CLI). Use the help switch
-(-h or &ndash;help) to display inline help.</p>
-<p>The parameters listed below may also be set through the Beachfront UI.</p>
-<pre><code>$ python bfalg_ndwi.py -h
-usage: bfalg-ndwi [-h] -i INPUT [-b BANDS BANDS] [--outdir OUTDIR]
-                  [--basename BASENAME] [--l8bqa L8BQA] [--coastmask]
-                  [--minsize MINSIZE] [--close CLOSE] [--simple SIMPLE]
-                  [--verbose VERBOSE] [--version]
-
-Beachfront Algorithm: NDWI (v1.0.8)
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -i INPUT, --input INPUT
-                        Input image (1 or 2 files) (default: None)
-  -b BANDS BANDS, --bands BANDS BANDS
-                        Band numbers for Green and NIR bands (default: [1, 1])
-  --outdir OUTDIR       Save intermediate files to this dir (otherwise temp)
-                        (default: )
-  --basename BASENAME   Basename to give to output files (no extension,
-                        defaults to first input filename (default: None)
-  --l8bqa L8BQA         Landat 8 Quality band (used to mask clouds) (default:
-                        None)
-  --coastmask           Mask non-coastline areas (default: False)
-  --minsize MINSIZE     Minimum coastline size (default: 100.0)
-  --close CLOSE         Close line strings within given pixels (default: 5)
-  --simple SIMPLE       Simplify using tolerance in map units (default: None)
-  --verbose VERBOSE     0: Quiet, 1: Debug, 2: Info, 3: Warn, 4: Error, 5:
-                        Critical (default: 2)
-  --version             Print version and exit
-</code></pre>
-
-<p>If a single filename is provided via the INPUT argument, then BANDS needs to be
-provided to specify which bands in the file should be used. Otherwise it defaults
-to &lsquo;1, 1&rsquo;, meaning it would use the same band for both Green and NIR. This example
-uses the first band in the file as the Green band and the fifth as the NIR.</p>
-<pre><code>$ bfalg-ndwi -i test1.tif -b 1 5
-</code></pre>
-
-<p>If the INPUT parameter is provided twice for two filenames, then BANDS is the band
-number for the first file (Green) and the second file (NIR). This example uses
-the second band from the <code>test1.tif</code> as the Green band, and the first band from
-<code>test2.tif</code> as the NIR band.</p>
-<pre><code>$ bfalg-ndwi -i test1.tif -i test2.tif -b 2 1
-</code></pre>
-
-<p>Input files are all that are absolutely required, but a more typical scenario
-would look like this (using the CLI):</p>
-<pre><code>$ bfalg-ndwi -i scene123.tif -b 1 2 --basename testrun --outdir scene123-output --coastmask
-</code></pre>
-
-<p>This will apply the included buffered coastline (<code>bfalg_ndwi/coastmask.shp</code>) to
-the image to mask out non-coastal regions. It will store all output files with
-the name <code>testrun</code> (+ additional tag and extension, e.g. <code>testrun.geojson</code>,
-<code>testrun_otsu.TIF</code>) in the directory <code>scene123-output/</code>.</p>
-<p>For Landsat8: If the BQA band is available, it can be provided which will mask
-out the clouds from the scene.</p>
-<pre><code>$ bfalg-ndwi -i LC80080282016215LGN00_B1.TIF -i LC80080282016215LGN00_B5.TIF --l8bqa LC80080282016215LGN00_BQA.TIF --basename LC80080282016215LGN00 --outdir LC80080282016215LGN00_test --coastmask
-</code></pre>
-
-<p>The last three remaining parametes are tuning parameters involving the creation
-of the vector output.</p>
-<ul>
-<li><code>minsize</code> (100): This is the minimum size a linestring should be before being
-    filtered out. This corresponds to the <code>potrace</code> <a href="http://potrace.sourceforge.net/#usage">parameter</a>
-    <code>-t</code>/<code>--turdsize</code>, and is not the length of the line but rather some measure
-    of the extent of it. The default of 10 will not filter out many lines. For
-    Landsat, a value of 100 works well at removing false coasts, but may also
-    remove islands or smaller incomplete shorelines.</li>
-<li><code>close</code> (5): Linestrings will be closed if their two endpoints are within this
-    number of pixels. The default is 5 and setting it to 0 will turn it off. This
-    should not be set to a value much higher than 10.</li>
-<li><code>simplify</code> (None): Simplification will not be done by default. If provided, it
-    is in units of degrees and is used to simplify and smooth the output.
-    Simplification is heavily application and source imagery dependent, and is a
-    lossy process. Consider starting points for RapidEye and PlanetScope data to be
-    0.00035, and  0.0007 for Landsat8.</li>
-</ul>
-<h3 id="band_combinations">Band Combinations<a class="headerlink" href="#band_combinations" title="Permanent link">&para;</a></h3>
-<p>The traditional NDWI algorithm uses the Green and NIR bands to calculate a
-normalized difference index:</p>
-<pre><code>NDWI = (green-nir) / (green+nir)
-</code></pre>
-
-<p>The band names Green and NIR are what is referenced to in the online help.
-However, other bands can work as well or even better on some instruments. The
-Green band is a band that has a high water reflectance, while the NIR band is a
-band that has a very low water reflectance. The following bands are recommended.</p>
+<h1 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h1>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p>Most simply, Beachfront is a system that orchestrates a user-driven workflow where algorithms produce automated vector shoreline detections from available, processed satellite imagery.</p>
+<p>In greater detail, Beachfront enables users to search for and choose their data input (currently a satellite image), select the detection algorithm they want to run, and then invoke Beachfront to process that imagery with an algorithm to produce vector data as an output.</p>
+<p>Upon the user executing an algorithm in the UI, the Beachfront API receives this request and reads in pertinent metadata that belongs to the input image, takes that information and appends it to each vector output, so the vectors maintain the pedigree of the source satellite image.  In addition, Beachfront takes metadata from the tide service (a predicted tide height, 24 hour low height, and 24 hour high height), along with ancillary information such as: the classification of the data, the ‘not to be used for navigation or targeting’ disclaimer, the version of the algorithm at runtime, the user information, time of process, then appends all of this information to the correct vector data as well.  Every vector is attributed with this information so that later in analysis and/or production, these vectors can be used in conjunction with different data sources in an area of interest, and the pedigree of each vector remains.</p>
+<h2 id="data_dictionary">Data Dictionary<a class="headerlink" href="#data_dictionary" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Sensor</th>
-<th>&lsquo;Green&rsquo; band</th>
-<th>&lsquo;NIR&rsquo; band</th>
+<th>Attribute Name</th>
+<th>Attribute Definition</th>
+<th>Example Values</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Landsat8</td>
-<td>1 (Coastal)</td>
-<td>5 (NIR)</td>
+<td>job_id</td>
+<td>This is a unique 36 character designation of the individual job that is run in Beachfront.  This unique hash is generated by Beachfront back end.</td>
+<td>d3b9f87d-c2a2-4c40-b200</td>
 </tr>
 <tr>
-<td>RapidEye</td>
-<td>2 (Green)</td>
-<td>4 (NIR)</td>
+<td>algorithm_id</td>
+<td>This is the unique identifier of the algorithm and its associated version that was run upon execution.</td>
+<td>872cc1ff-cf24-42b2-a94c</td>
 </tr>
 <tr>
-<td>PlanetScope</td>
-<td>2 (Green)</td>
-<td>4 (NIR)</td>
+<td>algorithm_name</td>
+<td>This is the name of the algorithm service used for processing.</td>
+<td>BF_Algo_NDWI_PY</td>
 </tr>
 <tr>
-<td>Sentinel-2</td>
-<td>2 (Blue)</td>
-<td>8 (NIR)</td>
+<td>algorithm_version</td>
+<td>This is the version of the algorithm used at the time of processing.</td>
+<td>1.1.1</td>
+</tr>
+<tr>
+<td>cloud_cover</td>
+<td>This is the percentage cloud cover of the source image.</td>
+<td>0</td>
+</tr>
+<tr>
+<td>created_by</td>
+<td>This is the identity of the user that ran the Beachfront detection job.</td>
+<td>cn=testuser, OU=Component, OU=NGA, OU=DoD, O=U.S. Government, C=US</td>
+</tr>
+<tr>
+<td>created_on</td>
+<td>This is the time in zulu/GMT that the user ran the Beachfront detection job.</td>
+<td>2018-08-02T19:03:07.866+00:00</td>
+</tr>
+<tr>
+<td>name</td>
+<td>This is the name of the file that the user designates.</td>
+<td>S2B_MSIL1C_20180720T100029</td>
+</tr>
+<tr>
+<td>resolution</td>
+<td>This is the pixel size of the third party source image.  Values are in meters and were derived from third party data product information.</td>
+<td>10</td>
+</tr>
+<tr>
+<td>scene_id</td>
+<td>This is the name of the image identifier from the third party image provider.</td>
+<td>sentinel:S2B_MSIL1C_20180720T100029</td>
+</tr>
+<tr>
+<td>sensor_name</td>
+<td>This is the third party image provider platform name</td>
+<td>Sentinel-2B</td>
+</tr>
+<tr>
+<td>src_horizontal_accuracy</td>
+<td>This is the source&rsquo;s horizontal accuracy.  Since Beachfront uses image sources from different third parties, the standards vary for measuring this.</td>
+<td>12.5m with GCPs</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Final status of the Beachfront job.</td>
+<td>Success</td>
+</tr>
+<tr>
+<td>tide</td>
+<td>Approximate tidal height in meters according to Beachfront&rsquo;s Tide Prediction Service methodology for time and location of image collection.</td>
+<td>0.350270918707115</td>
+</tr>
+<tr>
+<td>tide_min_24h</td>
+<td>Approximate 24 hour minimum tidal height in meters according to Tide Prediction Service methodology for 24 hour time period for location of image collection.</td>
+<td>0.320737772095838</td>
+</tr>
+<tr>
+<td>tide_max_24h</td>
+<td>Approximate 24 hour maximum tidal height in meters according to Tide Prediction Service methodology for 24 hour time period for location of image collection.</td>
+<td>0.444723733896406</td>
+</tr>
+<tr>
+<td>time_of_collect</td>
+<td>This is the source time of collect derived from the third party provider.  All times are in zulu.</td>
+<td>2018-07-20T10:02:41.557+00:00</td>
+</tr>
+<tr>
+<td>data_usage</td>
+<td>Static statement applied to all regarding disclaimer that data is not to be used for targeting or navigation.</td>
+<td>NOT FOR TARGETING OR NAVIGATION PURPOSES</td>
+</tr>
+<tr>
+<td>classification</td>
+<td>Classification of the data.  This is a static classification of unclassified when using unclassified data sources.</td>
+<td>UNCLASSIFIED</td>
 </tr>
 </tbody>
 </table></div>
