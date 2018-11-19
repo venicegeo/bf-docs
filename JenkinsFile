@@ -91,7 +91,7 @@ node {
         sh "cf api ${env.PCF_API_ENDPOINT}"
         sh "cf auth ${CFUSER} ${CFPASS}"
         sh "cf target -o ${env.PCF_ORG} -s ${env.PHASE_ONE_PCF_SPACE}"
-        sh "cf push ${appName} -f manifest.jenkins.yml --hostname ${appName} -d ${env.PHASE_ONE_PCF_DOMAIN} --no-start -m 512M --no-route"
+        sh "cf push ${appName} -f manifest.jenkins.yml --no-start -m 512M --no-route"
       	sh "cf set-env ${appName} SPACE ${env.PHASE_ONE_PCF_SPACE}"
       	sh "cf set-env ${appName} DOMAIN ${env.PHASE_ONE_PCF_DOMAIN}"
         try {
@@ -143,7 +143,7 @@ node {
 			sh "cf api ${env.PCF_API_ENDPOINT}"
 			sh "cf auth ${CFUSER} ${CFPASS}"
 			sh "cf target -o ${env.PCF_ORG} -s ${env.PHASE_TWO_PCF_SPACE}"
-			sh "cf push ${appName} --hostname ${appName} -f manifest.jenkins.yml -d ${env.PHASE_TWO_PCF_DOMAIN} --no-start -m 512M --no-route"
+			sh "cf push ${appName}-f manifest.jenkins.yml --no-start -m 512M --no-route"
 			sh "cf set-env ${appName} SPACE ${env.PHASE_TWO_PCF_SPACE}"
 			sh "cf set-env ${appName} DOMAIN ${env.PHASE_TWO_PCF_DOMAIN}"
                         try {
