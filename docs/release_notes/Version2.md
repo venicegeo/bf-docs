@@ -91,8 +91,8 @@ The following additions and enhancements were made within the 2.0 release:
 
 #### Scene/Tile Preview of Planet Data (provided by Planet):
 
--   Enables users to visually inspect image scenes/tiles provided by Planet DAS,
-    e.g., Planet DAS tile server dependency, prior to detection job execution
+-   Enables users to visually inspect image scenes/tiles provided by Planet,
+    e.g., Planet tile server dependency, prior to detection job execution
 -   Enables user download to a local machine
     -   Vector outputs will be in GeoJSON, GeoPackage, or Shapefile format
         (user's choice)
