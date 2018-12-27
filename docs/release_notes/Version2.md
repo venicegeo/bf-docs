@@ -59,7 +59,7 @@ Beachfront 2.0 builds on Beachfront 1.0 and Piazza and starts to combine the
 two applications into one finding efficiencies.  These release notes contain
 the Beachfront 1.0 and Piazza MVP since those versions of the software were not
 ever officially delivered and granted ATO through NGA.  Beachfront 2.0 in UC
-will enable users to securely login using GEOAxIS, search-activated PlanetDAS
+will enable users to securely login using GEOAxIS, search-activated Planet
 provided imagery, execute coastline detection using an NDWI-based algorithm
 service, and download tide-coordinated vector outputs after detection job
 execution. Piazza capabilities have been absorbed into Beachfront and it will be
@@ -79,7 +79,7 @@ The following additions and enhancements were made within the 2.0 release:
 -   Users will be able to login using their GeoAxis credentials (PKI,
     Disadvantaged User Account, Austere Account) through an OAuth2-enabled system
 
-#### Searching Planet Data to run Coastline Detection on through PlanetDAS:
+#### Searching Planet Data to run Coastline Detection on through Planet:
 
 -   User-controlled search of active AOIs and TOIs of RapidEye, PlanetScope, and
     Copernicus Sentinel-2 imagery can be made using the following filters:
@@ -89,7 +89,7 @@ The following additions and enhancements were made within the 2.0 release:
 -   Users can choose between searching RapidEye, PlanetScope, or Sentinel-2
     imagery for candidate scenes/tiles
 
-#### Scene/Tile Preview of Planet Data (provided by PlanetDAS):
+#### Scene/Tile Preview of Planet Data (provided by Planet):
 
 -   Enables users to visually inspect image scenes/tiles provided by Planet DAS,
     e.g., Planet DAS tile server dependency, prior to detection job execution
